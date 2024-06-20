@@ -8,12 +8,15 @@ const slideShowIndex = ref<number>(0);
 let interval: number | undefined = undefined;
 
 const slides = ref<Array<{ path: string; text: string }>>([
-    { path: "/image_1.jpg", text: "Quote about the image" },
-    { path: "/image_2.jpg", text: "Quote about the image" },
-    { path: "/image_3.jpg", text: "Quote about the image" },
-    { path: "/image_4.jpg", text: "Quote about the image" },
-    { path: "/image_5.jpg", text: "Quote about the image" },
-    { path: "/image_6.jpg", text: "Quote about the image" },
+    {
+        path: "/image_1.jpg",
+        text: "The rover is having fun in a make shift sandpit",
+    },
+    { path: "/image_2.jpg", text: "Let free on an alien land scape" },
+    { path: "/image_3.jpg", text: "Perseus has a play date with his buddies" },
+    { path: "/image_4.jpg", text: "Hi Aidan" },
+    { path: "/image_5.jpg", text: "The team inspect the rover" },
+    { path: "/image_6.jpg", text: "Deploy little friend" },
 ]);
 
 onMounted(() => {
@@ -41,16 +44,19 @@ const scroll = () => {
         <img :src="slides[slideShowIndex].path" />
         <h1>QUTRC Rover</h1>
         <div class="div-slides">
-            <span class="slide pause-play" @click="playSlideShow = !playSlideShow">
-                <FontAwesomeIcon :icon="playSlideShow ? faPause : faPlay" />
-            </span>
-            <span
-                class="slide"
-                v-for="(slide, index) in slides"
-                :class="{ active: index === slideShowIndex }"
-                @click="slideShowIndex = index">
-                <img :src="slide.path" alt="" />
-            </span>
+            <p v-text="slides[slideShowIndex].text" class="image-text"></p>
+            <div class="div-slide-icons">
+                <span class="slide pause-play" @click="playSlideShow = !playSlideShow">
+                    <FontAwesomeIcon :icon="playSlideShow ? faPause : faPlay" />
+                </span>
+                <span
+                    class="slide"
+                    v-for="(slide, index) in slides"
+                    :class="{ active: index === slideShowIndex }"
+                    @click="slideShowIndex = index">
+                    <img :src="slide.path" alt="" />
+                </span>
+            </div>
         </div>
     </div>
     <div class="div-scroll" @click.prevent="scroll">
@@ -104,69 +110,83 @@ const scroll = () => {
     }
 
     .div-slides {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         right: 20px;
+        left: 20px;
         bottom: 20px;
-        display: flex;
         z-index: 6;
-        flex-wrap: wrap;
-        width: fit-content;
-        justify-content: right;
 
-        .pause-play {
-            background-color: var(--black);
-            position: relative;
-
-            svg {
-                color: var(--white);
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 30px;
-                height: 30px;
-            }
+        .image-text {
+            padding: 10px;
+            color: var(--white);
+            font-size: 22px;
+            margin: auto auto auto 30px;
+            text-align: left;
         }
 
-        .active {
-            border-color: var(--accent) !important;
-            position: relative;
+        .div-slide-icons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: right;
 
-            &::after {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                opacity: 0.4;
-                background-color: var(--accent);
-                z-index: 7;
-                top: 0;
-                left: 0;
-                animation: slideProgress 5s;
+            .pause-play {
+                background-color: var(--black);
+                position: relative;
+
+                svg {
+                    color: var(--white);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 30px;
+                    height: 30px;
+                }
             }
 
-            @keyframes slideProgress {
-                0% {
-                    width: 0;
-                }
-                100% {
+            .active {
+                border-color: var(--accent) !important;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
                     width: 100%;
+                    opacity: 0.4;
+                    background-color: var(--accent);
+                    z-index: 7;
+                    top: 0;
+                    left: 0;
+                    animation: slideProgress 5s;
+                }
+
+                @keyframes slideProgress {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 100%;
+                    }
                 }
             }
-        }
 
-        .slide {
-            transition: all 1s;
-            border: 2px var(--black) solid;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            margin: 10px 5px 0 5px;
+            .slide {
+                transition: all 1s;
+                border: 2px var(--black) solid;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                margin: 10px 5px 0 5px;
 
-            img {
-                object-fit: cover;
-                height: 100%;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
             }
         }
     }

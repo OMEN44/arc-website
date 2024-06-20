@@ -7,7 +7,7 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 const timer = ref<string>("00:00:00");
 let interval: number | undefined = undefined;
 const finalDate = new Date("03/21/2025");
-const showMenu = ref<boolean>(true);
+const showMenu = ref<boolean>(false);
 
 onMounted(() => {
     interval = setInterval(() => {
@@ -18,7 +18,7 @@ onMounted(() => {
         var minutes = Math.floor((millisecondDiff % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((millisecondDiff % (1000 * 60)) / 1000);
 
-        timer.value = `Time until comp: ${days}:${hours}:${minutes}:${seconds}`;
+        timer.value = `Time until comp: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
     }, 1000);
 });
 
@@ -41,21 +41,37 @@ onBeforeUnmount(() => {
                 <RouterLink class="link" to="/about">Team</RouterLink>
                 <RouterLink class="link" to="/home">Rover</RouterLink>
                 <div class="div-social-media-mobile">
-                    <FontAwesomeIcon :icon="faInstagram" />
-                    <FontAwesomeIcon :icon="faFacebook" />
-                    <FontAwesomeIcon :icon="faTiktok" />
-                    <FontAwesomeIcon :icon="faLinkedin" />
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faInstagram" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faFacebook" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faTiktok" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faLinkedin" />
+                    </a>
                 </div>
             </div>
             <div class="div-bottom">
                 <div class="div-social-media">
-                    <FontAwesomeIcon :icon="faInstagram" />
-                    <FontAwesomeIcon :icon="faFacebook" />
-                    <FontAwesomeIcon :icon="faTiktok" />
-                    <FontAwesomeIcon :icon="faLinkedin" />
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faInstagram" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faFacebook" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faTiktok" />
+                    </a>
+                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                        <FontAwesomeIcon :icon="faLinkedin" />
+                    </a>
                 </div>
                 <span class="countdown" v-text="timer"></span>
-                <p>Join us</p>
+                <a href="https://qutrobotics.com/contact">Join us</a>
             </div>
         </div>
     </div>
@@ -76,7 +92,7 @@ onBeforeUnmount(() => {
         position: relative;
         border: 1px var(--accent);
         border-style: none solid solid none;
-        border-radius: 0 0 25% 0;
+        border-radius: 0 0 10% 0;
 
         img {
             max-width: 100px;
@@ -120,9 +136,14 @@ onBeforeUnmount(() => {
                 height: 18px;
                 cursor: pointer;
             }
+
+            a {
+                text-decoration: none;
+                color: var(--black);
+            }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 1000px) {
             position: relative;
 
             .div-mobile-menu {
@@ -158,6 +179,7 @@ onBeforeUnmount(() => {
                         margin: auto 15px;
 
                         svg {
+                            color: var(--white);
                             margin: 4px 10px 0 5px;
                             width: 20px;
                             height: 20px;

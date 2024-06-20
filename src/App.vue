@@ -12,7 +12,7 @@ import NavBar from "./components/NavBar.vue";
 
 <style scoped>
 .div-main-container {
-    background-color: var(--black);
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
