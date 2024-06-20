@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
-    <nav-bar />
     <div class="div-main-container">
+        <nav-bar />
         <RouterView />
     </div>
 </template>
@@ -16,5 +16,19 @@ import NavBar from "./components/NavBar.vue";
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    position: relative;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 </style>

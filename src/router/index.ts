@@ -5,7 +5,7 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: "/",
+            path: "/home",
             name: "home",
             component: HomeView,
         },
@@ -14,6 +14,11 @@ const router = createRouter({
             name: "about",
             // Lazy loading
             component: () => import("../views/AboutView.vue"),
+        },
+        {
+            path: "/:pathMatch(.*)*",
+            name: "notFound",
+            redirect: { name: "home" },
         },
     ],
 });
