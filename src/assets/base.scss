@@ -1,10 +1,14 @@
 :root {
-  --accent: #FF671F;
+  --accent: #ff671f;
   --primary: #003c71;
-  --secondary: #00aeef;
+  --secondary: #066abb;
   --subtle-accent: #8A8D8F;
   --black: #1A1A1B;
   --white: rgb(238, 238, 238);
+}
+
+body * {
+  font-family: 'Roboto';
 }
 
 // Nav bar link style
@@ -12,25 +16,10 @@
   text-decoration: none;
   color: var(--white);
   font-size: 24px;
-  margin: 0 20px;
-  position: relative;
+  padding: 5px 10px;
   transition: color 0.3s;
 
-  &::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 3px;
-      bottom: 0;
-      background-color: var(--accent);
-      transition: width 0.3s ease-out;
-  }
-
-  &:hover {
-      // color: var(--accent);
-
-      &::before {
-          width: 100%;
-      }
-  }
+  &:hover{
+      color: var(--accent) !important;
+}
 }
