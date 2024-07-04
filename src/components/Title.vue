@@ -15,6 +15,7 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
+    border-radius: var(--radius);
 
     * {
         font-family: "Bebas Neue", sans-serif;

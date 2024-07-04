@@ -127,6 +127,7 @@ onBeforeUnmount(() => {
             justify-content: space-between;
             background-color: var(--secondary);
             padding: 2px 10px;
+            border-radius: var(--radius);
         }
     }
 

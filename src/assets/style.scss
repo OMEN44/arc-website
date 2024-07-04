@@ -1,0 +1,44 @@
+:root {
+    --accent: #ff671f;
+    --primary: #003c71;
+    --secondary: #066abb;
+    --subtle-accent: #8A8D8F;
+    --black: #1A1A1B;
+    --white: rgb(238, 238, 238);
+
+    --radius:10px;
+}
+  
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    padding: 5px 15px;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: var(--primary);
+
+    &:hover {
+        background-color: var(--secondary);
+    }
+}
+  
+// Nav bar link style
+.link {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 24px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+  
+    &:hover{
+        color: var(--accent) !important;
+    }
+}
