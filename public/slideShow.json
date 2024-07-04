@@ -1,9 +1,5 @@
 [
-    { "path": "/image_1.jpg", "text": "The rover is having fun in a make shift sandpit" },
-    { "path": "/image_2.jpg", "text": "Let free on an alien land scape" },
-    { "path": "/image_3.jpg", "text": "Perseus has a play date with his buddies" },
-    { "path": "/image_4.jpg", "text": "Hi Aidan" },
-    { "path": "/image_5.jpg", "text": "The team inspect the rover" },
-    { "path": "/image_6.jpg", "text": "Deploy little friend" },
-    { "path": "/image_7.jpg", "text": "The team" }
+    { "path": "/image_1.jpg", "title": "Our rover", "text": "We are currently working on our seconds rover Perseus. After learning from what worked and what didn't on our last rover we are working towards a more robust and capable rover." },
+    { "path": "/image_6.jpg", "title": "Competition day", "text": "Since the teams formation in 2021 we have performed very well at the Australian Rover Challenge and look forwards to competing again." },
+    { "path": "/image_7.jpg", "title": "Meet the team", "text": "Our team is constantly growing and changing. Making improvements to Perseus requirs a range of technical skills and good ideas from our team." }
 ]

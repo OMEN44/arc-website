@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import slidesJSON from "../../../public/slideShow.json";
 
 const playSlideShow = ref<boolean>(true);
 const slideShowIndex = ref<number>(0);
 let interval: number | undefined = undefined;
 
-const slides = ref<Array<{ path: string; text: string }>>(slidesJSON);
+const slides = ref<Array<{ path: string; title: string; text: string }>>(slidesJSON);
 
 onMounted(() => {
     document.getElementById("slide-show")!.style.backgroundImage = `url(${
@@ -24,6 +24,12 @@ onMounted(() => {
     }, 5000);
 });
 
+watch(slideShowIndex, () => {
+    document.getElementById("slide-show")!.style.backgroundImage = `url(${
+        slides.value[slideShowIndex.value].path
+    })`;
+});
+
 onBeforeUnmount(() => {
     clearInterval(interval);
 });
@@ -32,7 +38,10 @@ onBeforeUnmount(() => {
 <template>
     <div id="slide-show" class="slide-show">
         <div class="slide-info">
-            <h1>Title<button>See more</button></h1>
+            <div class="slide-title">
+                <h1>{{ slides[slideShowIndex].title }}</h1>
+                <button>See more</button>
+            </div>
             <p v-text="slides[slideShowIndex].text"></p>
             <div class="slide-icons">
                 <span
@@ -56,9 +65,9 @@ onBeforeUnmount(() => {
 .slide-show {
     overflow-x: hidden;
     width: 100vw;
-    height: 80vh;
-    background-image: url("/public/image_7.jpg");
-    background-size: auto 100%;
+    height: 70vh;
+    background-image: url("/public/image_7.jpg") bottom;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -71,30 +80,34 @@ onBeforeUnmount(() => {
         width: fit-content;
         max-width: 60vw;
 
-        h1 {
-            font-size: 30px;
-            color: var(--white);
+        .slide-title {
+            display: flex;
+
+            h1 {
+                font-size: 30px;
+                color: var(--white);
+                font-family: "Bebas Neue", sans-serif;
+            }
+
+            button {
+                background-color: var(--accent);
+                color: var(--white);
+                border: none;
+                border-radius: var(--radius);
+                padding: 5px 10px;
+                cursor: pointer;
+                transition: transform 0.5s;
+                margin: 0 10px;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
         }
 
         p {
             font-size: 20px;
             color: var(--white);
-        }
-
-        button {
-            background-color: var(--accent);
-            color: var(--white);
-            border: none;
-            border-radius: var(--radius);
-            padding: 5px 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: transform 0.5s;
-            margin-left: 10px;
-
-            &:hover {
-                transform: scale(1.1);
-            }
         }
     }
 
@@ -102,10 +115,6 @@ onBeforeUnmount(() => {
         display: flex;
         flex-wrap: wrap;
         width: fit-content;
-        // background-color: var(--secondary);
-        // border-radius: var(--radius);
-        // margin: 10px;
-        // padding-left: 10px;
 
         .center svg {
             margin-left: 2px;
@@ -161,7 +170,7 @@ onBeforeUnmount(() => {
             height: 50px;
             overflow: hidden;
             margin: 10px 10px 0 0;
-            // margin: 10px 10px 10px 0;
+            cursor: pointer;
 
             img {
                 object-fit: cover;
