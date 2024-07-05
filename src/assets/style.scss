@@ -1,5 +1,6 @@
 :root {
     --accent: #ff671f;
+    --accent-alt: #ff671fa0;
     --primary: #003c71;
     --secondary: #066abb;
     --subtle-accent: #8A8D8F;
@@ -14,19 +15,20 @@ body * {
 }
 
 button {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 22px;
-    padding: 5px 15px;
-    border: none;
-    height: 40px;
-    border-radius: 20px;
+    background-color: var(--accent);
     color: var(--white);
+    border: none;
+    border-radius: var(--radius);
     cursor: pointer;
-    transition: background-color 0.3s;
-    background-color: var(--primary);
+    transition: transform 0.5s;
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    height: fit-content;
 
     &:hover {
-        background-color: var(--secondary);
+        transform: scale(1.1);
     }
 }
   

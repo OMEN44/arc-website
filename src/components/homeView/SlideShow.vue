@@ -80,6 +80,10 @@ onBeforeUnmount(() => {
         width: fit-content;
         max-width: 60vw;
 
+        @media (max-width: 800px) {
+            max-width: calc(100vw - 20px);
+        }
+
         .slide-title {
             display: flex;
 
@@ -88,26 +92,15 @@ onBeforeUnmount(() => {
                 color: var(--white);
                 font-family: "Bebas Neue", sans-serif;
             }
-
-            button {
-                background-color: var(--accent);
-                color: var(--white);
-                border: none;
-                border-radius: var(--radius);
-                padding: 5px 10px;
-                cursor: pointer;
-                transition: transform 0.5s;
-                margin: 0 10px;
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
         }
 
         p {
             font-size: 20px;
             color: var(--white);
+
+            @media (max-width: 800px) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -132,6 +125,11 @@ onBeforeUnmount(() => {
                 transform: translate(-50%, -50%);
                 width: 30px;
                 height: 30px;
+
+                @media (max-width: 800px) {
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
 
@@ -171,6 +169,11 @@ onBeforeUnmount(() => {
             overflow: hidden;
             margin: 10px 10px 0 0;
             cursor: pointer;
+
+            @media (max-width: 800px) {
+                width: 40px;
+                height: 40px;
+            }
 
             img {
                 object-fit: cover;
