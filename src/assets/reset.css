@@ -36,7 +36,7 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-color: var(--black);
+    background-color: var(--primary);
 }
 
 /* A elements that don't have a class get default styles */

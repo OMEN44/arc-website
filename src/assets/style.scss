@@ -7,7 +7,12 @@
     --black: #1A1A1B;
     --white: rgb(238, 238, 238);
 
-    --radius:10px;
+    --radius: 10px;
+    --text-margin: 15%;
+    --text-margin-mobile: 5%;
+
+    --media-condition: 800px;
+
 }
   
 body * {

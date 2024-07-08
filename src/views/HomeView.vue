@@ -8,7 +8,7 @@ import SlideShow from "../components/homeView/SlideShow.vue";
         <SlideShow />
         <div class="div-about">
             <div class="div-quote">
-                <h2>Fueled by passion, Driven by discovery.</h2>
+                <h2>Fueled by passion, Driven by discovery<span>.</span></h2>
                 <p>
                     In 2023 the QUT Robotics Club constructed our first Lunar Rover, reaching new
                     limits for the club. The team now channels their skills into the rover Perseus,
@@ -33,17 +33,19 @@ import SlideShow from "../components/homeView/SlideShow.vue";
                 </p>
             </div>
             <div class="video-container">
-                <iframe
-                    class="video"
-                    src="https://www.youtube.com/embed/nWxPPo64xdE"
-                    title="QUT Centre for Robotics"
-                    frameborder="0"
-                    allow="accelerometer; loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                <div class="video-frame">
+                    <iframe
+                        class="video"
+                        src="https://www.youtube.com/embed/nWxPPo64xdE"
+                        title="QUT Centre for Robotics"
+                        frameborder="0"
+                        allow="accelerometer; loop; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
             </div>
             <div class="success-cards">
-                <h2>Our successes</h2>
+                <h2>Our successes<span>.</span></h2>
                 <div class="cards">
                     <div class="card">
                         <h3>2023 -</h3>
@@ -71,20 +73,21 @@ import SlideShow from "../components/homeView/SlideShow.vue";
 
 h2 {
     font-size: 35px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 20px;
     position: relative;
     width: fit-content;
-    z-index: 1;
 
-    &::after {
+    &::before {
         content: "";
         position: absolute;
-        bottom: 10px;
-        left: -5px;
-        width: calc(100% + 10px);
-        height: 10px;
-        z-index: -1;
-        background-color: var(--accent-alt);
+        background-color: var(--accent);
+        left: -20px;
+        width: 4px;
+        height: 100%;
+    }
+
+    span {
+        color: var(--accent);
     }
 }
 
@@ -92,28 +95,42 @@ h2 {
     color: var(--white);
     border: 2px var(--accent);
     border-style: solid none;
+    padding: 0 var(--text-margin);
+
+    @media (max-width: 800px) {
+        padding: 0 var(--text-margin-mobile) !important;
+    }
 
     .video-container {
-        padding: 0 10%;
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--primary);
+        margin: 0 10%;
 
-        .video {
-            width: 100%;
-            height: auto;
-            border: none;
+        @media (max-width: 800px) {
+            margin: 0;
+        }
+
+        .video-frame {
+            padding: 56% 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--primary);
+            position: relative;
+
+            .video {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                border-radius: var(--radius);
+            }
         }
     }
 
     .div-quote {
-        width: 100%;
-        background-color: var(--primary);
-        height: fit-content;
-        padding: 80px 10% 30px 10%;
+        padding: 80px 0 30px 0;
 
         p {
             font-size: 18px;
@@ -121,12 +138,7 @@ h2 {
     }
 
     .success-cards {
-        background-color: var(--primary);
-        padding: 30px calc(10% - 10px);
-
-        h2 {
-            margin-left: 10px;
-        }
+        padding: 30px 0;
 
         .cards {
             display: flex;
