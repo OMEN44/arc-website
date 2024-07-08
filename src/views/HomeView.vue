@@ -71,26 +71,6 @@ import SlideShow from "../components/homeView/SlideShow.vue";
     overflow-x: hidden;
 }
 
-h2 {
-    font-size: 35px;
-    margin: 0 0 10px 20px;
-    position: relative;
-    width: fit-content;
-
-    &::before {
-        content: "";
-        position: absolute;
-        background-color: var(--accent);
-        left: -20px;
-        width: 4px;
-        height: 100%;
-    }
-
-    span {
-        color: var(--accent);
-    }
-}
-
 .div-about {
     color: var(--white);
     border: 2px var(--accent);

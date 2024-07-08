@@ -36,6 +36,26 @@ button {
         transform: scale(1.1);
     }
 }
+
+h2 {
+    font-size: 35px;
+    margin: 0 0 10px 20px;
+    position: relative;
+    width: fit-content;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--accent);
+        left: -20px;
+        width: 4px;
+        height: 100%;
+    }
+
+    span {
+        color: var(--accent);
+    }
+}
   
 // Nav bar link style
 .link {
