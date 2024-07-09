@@ -2,7 +2,6 @@
   "name": "arc-website",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "server": "tsx watch --tsconfig tsconfig.server.json src/server",
