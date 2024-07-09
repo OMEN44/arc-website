@@ -10,17 +10,14 @@ const onScroll = (e: Event) => {
             ((e.target as HTMLDivElement).parentElement as HTMLDivElement).scrollWidth);
 
     if (percent > 1) percent = 1;
-    const pixelsLeft = `calc(28px * ${percent / 0.333})`;
-    console.log(percent * 0.333);
-
-    progressDot.value!.style.left = pixelsLeft;
+    progressDot.value!.style.left = `calc(28px * ${Math.round((percent * 100) / (100 / 2))})`;
 };
 </script>
 
 <template>
     <div class="slide-cards-container">
         <div class="cards" @scroll="onScroll">
-            <div class="card" v-for="_ in 3">
+            <div class="card" v-for="i in 3">
                 <div class="second">
                     <h2>Title<span>.</span></h2>
                     <p>
@@ -31,7 +28,7 @@ const onScroll = (e: Event) => {
                     </p>
                 </div>
                 <div class="first">
-                    <img src="/image_2.jpg" />
+                    <img :src="`/image_${i + 1}.jpg`" />
                     <button>See more</button>
                 </div>
             </div>
@@ -52,14 +49,16 @@ const onScroll = (e: Event) => {
     border-bottom: 2px var(--accent) solid;
 
     .cards {
-        padding: var(--text-margin);
+        padding: 10vh var(--text-margin);
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        scrollbar-width: none;
 
         &::-webkit-scrollbar {
             display: none;
         }
+
         .card {
             flex: 0 0 auto;
             &:first-child {
@@ -72,6 +71,7 @@ const onScroll = (e: Event) => {
             border-radius: var(--radius);
             overflow: hidden;
             color: var(--white);
+            height: 60vh;
 
             @media (max-width: 800px) {
                 margin-left: 20px;
@@ -111,6 +111,7 @@ const onScroll = (e: Event) => {
                 @media (max-width: 800px) {
                     width: 100%;
                     height: 70%;
+                    padding: 20px;
 
                     h2 {
                         font-size: 28px !important;
@@ -121,7 +122,7 @@ const onScroll = (e: Event) => {
                     font-size: 20px;
 
                     @media (max-width: 800px) {
-                        font-size: 18px;
+                        font-size: 17px;
                     }
                 }
             }

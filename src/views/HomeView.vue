@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SlideCards from "@/components/homeView/SlideCards.vue";
 import SlideShow from "../components/homeView/SlideShow.vue";
+import CustomFooter from "@/components/CustomFooter.vue";
 </script>
 
 <template>
@@ -63,6 +64,7 @@ import SlideShow from "../components/homeView/SlideShow.vue";
             </div>
         </div>
         <SlideCards />
+        <CustomFooter />
     </div>
 </template>
 

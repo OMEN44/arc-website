@@ -2,7 +2,7 @@
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
-import slidesJSON from "../../../public/slideShow.json";
+import slidesJSON from "../../slideShow.json";
 
 const playSlideShow = ref<boolean>(true);
 const slideShowIndex = ref<number>(0);

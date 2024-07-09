@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     border-radius: var(--radius);
+    width: fit-content;
 
     * {
         font-family: "Bebas Neue", sans-serif;

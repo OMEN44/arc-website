@@ -3,7 +3,7 @@ import { faFacebook, faInstagram, faLinkedin, faTiktok } from "@fortawesome/free
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import Title from "./Title.vue";
+import LogoComponent from "./LogoComponent.vue";
 
 const timer = ref<string>("00:00:00");
 let interval: number | undefined = undefined;
@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
 <template>
     <div class="navigation-container">
         <div class="title">
-            <Title />
+            <LogoComponent />
             <div class="mobile-menu" @click="showMenu = !showMenu">
                 <FontAwesomeIcon :icon="faBars" />
             </div>
