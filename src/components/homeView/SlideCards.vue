@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { faChevronCircleLeft, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "vue";
 
 const progressDot = ref<HTMLElement | null>(null);
@@ -16,6 +18,7 @@ const onScroll = (e: Event) => {
 
 <template>
     <div class="slide-cards-container">
+        <FontAwesomeIcon :icon="faChevronCircleLeft" class="arrow left" />
         <div class="cards" @scroll="onScroll">
             <div class="card" v-for="i in 3">
                 <div class="second">
@@ -33,7 +36,7 @@ const onScroll = (e: Event) => {
                 </div>
             </div>
         </div>
-
+        <FontAwesomeIcon :icon="faChevronCircleRight" class="arrow right" />
         <div class="progress-bar">
             <span ref="progressDot"></span>
             <div v-for="_ in 3"></div>
@@ -47,6 +50,44 @@ const onScroll = (e: Event) => {
     height: 80vh;
     position: relative;
     border-bottom: 2px var(--accent) solid;
+
+    @media (max-width: 800px) {
+        height: 90vh;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: var(--accent);
+        cursor: pointer;
+        z-index: 1;
+
+        background-color: var(--secondary);
+        padding: 10px;
+        border-radius: 50%;
+
+        @media (max-width: 800px) {
+            font-size: 30px;
+
+            &.left {
+                left: 10px !important;
+            }
+
+            &.right {
+                right: 10px !important;
+            }
+        }
+
+        &.left {
+            left: 20px;
+        }
+
+        &.right {
+            right: 20px;
+        }
+    }
 
     .cards {
         padding: 10vh var(--text-margin);
@@ -75,6 +116,7 @@ const onScroll = (e: Event) => {
 
             @media (max-width: 800px) {
                 margin-left: 20px;
+                height: 70vh;
             }
 
             .first {

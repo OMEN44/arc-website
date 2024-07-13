@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="title">
+    <div class="title container">
         <h1>Project Olympus</h1>
         <p>QUTRC ROVER TEAM</p>
     </div>
@@ -9,17 +9,14 @@
 
 <style scoped lang="scss">
 .title {
-    margin: 10px;
     padding: 5px 10px;
-    background: var(--secondary);
     height: fit-content;
     display: flex;
     flex-direction: column;
-    border-radius: var(--radius);
     width: fit-content;
 
     * {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: airStrike, sans-serif;
     }
 
     h1 {

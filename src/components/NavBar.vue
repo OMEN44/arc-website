@@ -6,7 +6,7 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import LogoComponent from "./LogoComponent.vue";
 
 const timer = ref<string>("00:00:00");
-let interval: number | undefined = undefined;
+let interval: NodeJS.Timeout | undefined = undefined;
 const finalDate = new Date("03/21/2025");
 const showMenu = ref<boolean>(false);
 
@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
             <div :class="`top ${showMenu ? 'show' : ''}`">
                 <div class="navigation-links">
                     <RouterLink class="link" to="/home">Home</RouterLink>
-                    <RouterLink class="link" to="/about">Team</RouterLink>
+                    <RouterLink class="link" to="/team">Team</RouterLink>
                     <RouterLink class="link" to="/home">Rover</RouterLink>
                 </div>
                 <div class="social-media-links">
@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
                     </a>
                 </div>
             </div>
-            <div class="bottom">
+            <div class="bottom container">
                 <span class="countdown" v-text="timer"></span>
                 <a href="https://qutrobotics.com/contact">Join us</a>
             </div>
@@ -87,6 +87,12 @@ onBeforeUnmount(() => {
             color: var(--white);
             display: none;
             margin: auto 30px auto auto;
+            transition: transform 0.5s;
+
+            &:hover {
+                cursor: pointer;
+                transform: rotate(180deg);
+            }
 
             @media (max-width: 800px) {
                 display: block;
@@ -125,9 +131,8 @@ onBeforeUnmount(() => {
         .bottom {
             display: flex;
             justify-content: space-between;
-            background-color: var(--secondary);
             padding: 2px 10px;
-            border-radius: var(--radius);
+            margin: 0;
         }
     }
 
@@ -171,141 +176,4 @@ onBeforeUnmount(() => {
         }
     }
 }
-
-// .navigation-container {
-//     background-color: var(--primary);
-//     position: absolute;
-//     width: 100%;
-//     display: flex;
-//     color: var(--white);
-//     z-index: 10;
-
-//     height: 100px;
-
-//     .navigation {
-//         background-color: var(--primary);
-//         flex: 1;
-//         margin: 10px 10px 10px 0;
-//         height: fit-content;
-//         z-index: 11;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-
-//         .mobile-menu {
-//             display: none;
-//         }
-
-//         .top {
-//             display: flex;
-//             justify-content: space-between;
-//             padding: 10px 0;
-
-//             svg {
-//                 width: 18px;
-//                 height: 18px;
-//                 cursor: pointer;
-//             }
-//         }
-
-//         .bottom {
-//             display: flex;
-//             justify-content: space-between;
-//             background-color: var(--secondary);
-//             padding: 2px 10px;
-//         }
-
-//         a {
-//             margin: auto 5px 0 5px;
-//             text-decoration: none;
-//             color: var(--white);
-//         }
-
-//         // .div-mobile-menu,
-//         // .div-social-media-mobile {
-//         //     display: none;
-//         // }
-
-//         // .div-top {
-//         //     margin: 15px 0;
-//         //     display: flex;
-//         // }
-
-//         // .footer {
-//         //     background-color: var(--secondary);
-//         //     display: flex;
-//         //     justify-content: space-between;
-//         //     padding: 2px 10px;
-//         //     font-size: large;
-//         //     margin: 10px 10px 10px 0;
-
-//         //     svg {
-//         //         margin: 0 5px -1px 5px;
-//         //         width: 18px;
-//         //         height: 18px;
-//         //         cursor: pointer;
-//         //     }
-
-//         //     a {
-//         //         text-decoration: none;
-//         //         color: var(--black);
-//         //     }
-//     }
-
-//     //     @media (max-width: 1000px) {
-//     //         position: relative;
-
-//     //         .div-mobile-menu {
-//     //             display: block;
-//     //             text-align: right;
-//     //             font-size: 30px;
-//     //             margin-right: 15px;
-//     //         }
-
-//     //         .div-social-media,
-//     //         .countdown {
-//     //             display: none;
-//     //         }
-
-//     //         .div-top {
-//     //             display: none;
-
-//     //             &--show {
-//     //                 position: absolute;
-//     //                 background-color: var(--primary);
-//     //                 border: 1px var(--accent);
-//     //                 border-style: none none solid solid;
-//     //                 display: flex;
-//     //                 flex-direction: column;
-//     //                 width: 100%;
-//     //                 animation: openMenu 0.2s;
-//     //                 height: 144px;
-//     //                 overflow-y: hidden;
-
-//     //                 .div-social-media-mobile {
-//     //                     display: flex;
-//     //                     height: 36px;
-//     //                     margin: auto 15px;
-
-//     //                     svg {
-//     //                         color: var(--white);
-//     //                         margin: 4px 10px 0 5px;
-//     //                         width: 20px;
-//     //                         height: 20px;
-//     //                     }
-//     //                 }
-//     //             }
-
-//     //             @keyframes openMenu {
-//     //                 0% {
-//     //                     height: 0;
-//     //                 }
-//     //                 100% {
-//     //                     height: 144px;
-//     //                 }
-//     //             }
-//     //         }
-//     //     }
-//     // }
-// }
 </style>

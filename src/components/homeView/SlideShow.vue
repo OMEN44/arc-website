@@ -6,7 +6,7 @@ import slidesJSON from "../../slideShow.json";
 
 const playSlideShow = ref<boolean>(true);
 const slideShowIndex = ref<number>(0);
-let interval: number | undefined = undefined;
+let interval: NodeJS.Timeout | undefined = undefined;
 
 const slides = ref<Array<{ path: string; title: string; text: string }>>(slidesJSON);
 
@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div id="slide-show" class="slide-show">
-        <div class="slide-info">
+        <div class="slide-info container">
             <div class="slide-title">
                 <h1>{{ slides[slideShowIndex].title }}</h1>
                 <button>See more</button>
@@ -73,12 +73,9 @@ onBeforeUnmount(() => {
     justify-content: end;
 
     .slide-info {
-        background-color: var(--secondary);
-        padding: 10px;
-        margin: 10px;
-        border-radius: var(--radius);
         width: fit-content;
         max-width: 60vw;
+        box-shadow: 0 0 20px black;
 
         @media (max-width: 800px) {
             max-width: calc(100vw - 20px);
@@ -90,7 +87,7 @@ onBeforeUnmount(() => {
             h1 {
                 font-size: 30px;
                 color: var(--white);
-                font-family: "Bebas Neue", sans-serif;
+                font-family: airStrike, sans-serif;
             }
         }
 

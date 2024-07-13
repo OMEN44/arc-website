@@ -10,10 +10,10 @@ const router = createRouter({
             component: HomeView,
         },
         {
-            path: "/about",
-            name: "about",
+            path: "/team",
+            name: "team",
             // Lazy loading
-            component: () => import("../views/AboutView.vue"),
+            component: () => import("../views/TeamView.vue"),
         },
         {
             path: "/:pathMatch(.*)*",

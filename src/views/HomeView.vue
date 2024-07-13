@@ -48,15 +48,15 @@ import CustomFooter from "@/components/CustomFooter.vue";
             <div class="success-cards">
                 <h2>Our successes<span>.</span></h2>
                 <div class="cards">
-                    <div class="card">
+                    <div class="card container">
                         <h3>2023 -</h3>
                         <p>QUTRC wins the Australian Rover Challenge</p>
                     </div>
-                    <div class="card">
+                    <div class="card container">
                         <h3>2021 -</h3>
                         <p>QUTRC wins the NASA Robotic Mining Competition</p>
                     </div>
-                    <div class="card">
+                    <div class="card container">
                         <h3>2019 -</h3>
                         <p>QUTRC wins the IEEE Autonomous Robotics Competition</p>
                     </div>

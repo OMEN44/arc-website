@@ -1,11 +1,9 @@
 :root {
     --accent: #ff671f;
-    --accent-alt: #ff671fa0;
-    --primary: #003c71;
-    --secondary: #066abb;
-    --subtle-accent: #8A8D8F;
-    --black: #1A1A1B;
-    --white: rgb(238, 238, 238);
+    --primary: #003c71; 
+    --secondary: #066abb; 
+    --black: #1A1A1B; // Second background
+    --white: #eeeeee; // Text
 
     --radius: 10px;
     --text-margin: 15%;
@@ -13,6 +11,11 @@
 
     --media-condition: 800px;
 
+}
+
+@font-face {
+    font-family: airStrike;
+    src: url(./font/airstrikeout.ttf);
 }
   
 body * {
@@ -68,4 +71,12 @@ h2 {
     &:hover{
         color: var(--accent) !important;
     }
+}
+
+.container {
+    box-shadow: 0 0 10px black;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 10px;
+    margin: 10px;
 }
