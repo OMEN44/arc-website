@@ -1,0 +1,159 @@
+[
+    {
+        "group": "Mechanical",
+        "description": "The mechanical design team is responsible for designing the physical structure of the robot. This includes the frame, the drive train, and any other physical components of the robot.",
+        "members": [
+            {
+                "name": "Tony Stark",
+                "role": "Team Leader",
+                "image": "/image_1.jpg"
+            },
+            {
+                "name": "Steve Rogers",
+                "role": "Mechanical Engineer",
+                "image": "/image_2.jpg"
+            },
+            {
+                "name": "Bruce Banner",
+                "role": "Mechanical Engineer",
+                "image": "/image_3.jpg"
+            },
+            {
+                "name": "Natasha Romanoff",
+                "role": "Mechanical Engineer",
+                "image": "/image_22.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Software",
+        "description": "The software development team is responsible for writing the code that controls the robot. This includes the autonomous code, the teleoperated code, and any other software components of the robot.",
+        "members": [
+            {
+                "name": "Wanda Maximoff",
+                "role": "Team Leader",
+                "image": "/image_7.jpg"
+            },
+            {
+                "name": "Vision",
+                "role": "Software Engineer",
+                "image": "/image_8.jpg"
+            },
+            {
+                "name": "Scott Lang",
+                "role": "Software Engineer",
+                "image": "/image_9.jpg"
+            },
+            {
+                "name": "Thor",
+                "role": "Software Engineer",
+                "image": "/image_23.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Electrical",
+        "description": "The electrical design team is responsible for designing the electrical system of the robot. This includes the wiring, the sensors, and any other electrical components of the robot.",
+        "members": [
+            {
+                "name": "Carol Danvers",
+                "role": "Team Leader",
+                "image": "/image_4.jpg"
+            },
+            {
+                "name": "Peter Parker",
+                "role": "Electrical Engineer",
+                "image": "/image_5.jpg"
+            },
+            {
+                "name": "T'Challa",
+                "role": "Electrical Engineer",
+                "image": "/image_6.jpg"
+            },
+            {
+                "name": "Stephen Strange",
+                "role": "Electrical Engineer",
+                "image": "/image_24.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Marketing and media",
+        "description": "The sponsor relations team is responsible for building relationships with sponsors and securing funding for the team. This includes writing grant proposals, organizing fundraising events, and maintaining relationships with sponsors.",
+        "members": [
+            {
+                "name": "Captain Marvel",
+                "role": "Team Leader",
+                "image": "/image_10.jpg"
+            },
+            {
+                "name": "Nick Fury",
+                "role": "Sponsor Relations Coordinator",
+                "image": "/image_11.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Management",
+        "description": "The marketing and media team is responsible for promoting the team and its activities. This includes managing social media accounts, creating promotional materials, and organizing outreach events.",
+        "members": [
+            {
+                "name": "Maria Hill",
+                "role": "Team Leader",
+                "image": "/image_12.jpg"
+            },
+            {
+                "name": "Phil Coulson",
+                "role": "Marketing Coordinator",
+                "image": "/image_13.jpg"
+            },
+            {
+                "name": "James Rhodes",
+                "role": "Media Coordinator",
+                "image": "/image_14.jpg"
+            },
+            {
+                "name": "Pepper Potts",
+                "role": "Outreach Coordinator",
+                "image": "/image_15.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Science",
+        "description": "The geology science team is responsible for studying the geology of the planet and collecting samples for analysis. This includes using various instruments to study the rocks and minerals on the planet.",
+        "members": [
+            {
+                "name": "Sheldon Cooper",
+                "role": "Team Leader",
+                "image": "/image_16.jpg"
+            }
+        ]
+    },
+    {
+        "group": "Fabrication",
+        "description": "The fabrication team is responsible for building the physical components of the robot. This includes cutting, welding, and assembling the parts of the robot.",
+        "members": [
+            {
+                "name": "Howard Stark",
+                "role": "Team Leader",
+                "image": "/image_17.jpg"
+            },
+            {
+                "name": "Peggy Carter",
+                "role": "Fabricator",
+                "image": "/image_18.jpg"
+            },
+            {
+                "name": "Sam Wilson",
+                "role": "Fabricator",
+                "image": "/image_19.jpg"
+            },
+            {
+                "name": "Bucky Barnes",
+                "role": "Fabricator",
+                "image": "/image_20.jpg"
+            }
+        ]
+    }
+]

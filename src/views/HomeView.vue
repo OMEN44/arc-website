@@ -9,28 +9,27 @@ import CustomFooter from "@/components/CustomFooter.vue";
         <SlideShow />
         <div class="div-about">
             <div class="div-quote">
-                <h2>Fueled by passion, Driven by discovery<span>.</span></h2>
+                <h2>Our journey so far...</h2>
                 <p>
-                    In 2023 the QUT Robotics Club constructed our first Lunar Rover, reaching new
-                    limits for the club. The team now channels their skills into the rover Perseus,
-                    that will be used to compete in the 2025 Australian Rover Callenge
-                </p>
-                <p>
-                    The QUT Robotics Club has been a part of the Australian Rover Challenge since
-                    2018. We have competed in the 2018, 2019, and 2021 competitions. In 2023 we won
-                    the competition and are now preparing for the 2025 competition. We have also
-                    been a part of the NASA Robotic Mining Competition since 2019. We have competed
-                    in the 2019, 2020, and 2021 competitions. In 2021 we won the competition and are
-                    now preparing for the 2022 competition. We have also been a part of the IEEE
-                    Autonomous Robotics Competition since 2019. We have competed in the 2019, 2020,
-                    and 2021 competitions. In 2021 we won the competition and are now preparing for
-                    the 2022 competition. We have also been a part of the IEEE Autonomous Robotics
-                    Competition since 2019. We have competed in the 2019, 2020, and 2021
-                    competitions. In 2021 we won the competition and are now preparing for the 2022
-                    competition. We have also been a part of the IEEE Autonomous Robotics
-                    Competition since 2019. We have competed in the 2019, 2020, and 2021
-                    competitions. In 2021 we won the competition and are now preparing for the 2022
-                    competition.
+                    In 2022 the QUT Robotics Club set the goal of competing in the Australian Rover
+                    Challenge hosted by the University of Adelaide across all four categories:
+                    Robotic manipulation, in-situ resource utilisation, offworld geology and
+                    autonomous operation.
+                    <br />
+                    In 2023 we competed with our first rover, a 6 wheeled 50kg rocker bogie design
+                    called Artemis. Excitedly we placed fourth in the competition.
+                    <br />
+                    For the 2024 competition we decided to redesign the entire rover based on our
+                    2023 experience. In 2024 we competed with our 4 wheeled, 40kg modular rover
+                    called Perseus. Again we competed in all four events and placed fourth in the
+                    now ever expanding competition.
+                    <br />
+                    With the QUT Robotics Club's 15 year tradition of learning and sharing we have
+                    demonstrated both Artemis and Perseus at various Open Days, school events,
+                    robotic competitions and CSIRO showcases.
+                    <br />
+                    We are thankful to our main supporters, the QUT Faculty of Electrical
+                    Engineering and Robotics and the Queensland Center for Robotics.
                 </p>
             </div>
             <div class="video-container">
@@ -46,19 +45,21 @@ import CustomFooter from "@/components/CustomFooter.vue";
                 </div>
             </div>
             <div class="success-cards">
-                <h2>Our successes<span>.</span></h2>
+                <h2>Our Successes<span>.</span></h2>
                 <div class="cards">
                     <div class="card container">
                         <h3>2023 -</h3>
-                        <p>QUTRC wins the Australian Rover Challenge</p>
+                        <p>
+                            First competition in the Australia Rover Challenge. Placed fourth
+                            overall.
+                        </p>
                     </div>
                     <div class="card container">
-                        <h3>2021 -</h3>
-                        <p>QUTRC wins the NASA Robotic Mining Competition</p>
-                    </div>
-                    <div class="card container">
-                        <h3>2019 -</h3>
-                        <p>QUTRC wins the IEEE Autonomous Robotics Competition</p>
+                        <h3>2024 -</h3>
+                        <p>
+                            Fourth place in the Australian Rover Challenge with newly build Perseus
+                            rover.
+                        </p>
                     </div>
                 </div>
             </div>

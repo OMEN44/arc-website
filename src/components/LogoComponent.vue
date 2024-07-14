@@ -16,7 +16,7 @@
     width: fit-content;
 
     * {
-        font-family: airStrike, sans-serif;
+        font-family: "Bebas Neue", sans-serif;
     }
 
     h1 {

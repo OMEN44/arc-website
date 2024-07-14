@@ -6,11 +6,9 @@
     --white: #eeeeee; // Text
 
     --radius: 10px;
+    --media-condition: 800px;
     --text-margin: 15%;
     --text-margin-mobile: 5%;
-
-    --media-condition: 800px;
-
 }
 
 @font-face {
@@ -38,6 +36,17 @@ button {
     &:hover {
         transform: scale(1.1);
     }
+}
+
+input[type=text], input[type=email], select, textarea {
+    color: var(--black);
+    border: none;
+    border-radius: var(--radius);
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    height: fit-content;
 }
 
 h2 {

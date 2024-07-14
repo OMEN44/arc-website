@@ -17,7 +17,7 @@ blockquote,
 dl,
 dd {
     font-family: ubuntu;
-    color: var(--text);
+    color: var(--white);
     margin: 0;
 }
 

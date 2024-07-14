@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
             h1 {
                 font-size: 30px;
                 color: var(--white);
-                font-family: airStrike, sans-serif;
+                font-family: "Bebas Neue", sans-serif;
             }
         }
 
