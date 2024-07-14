@@ -6,6 +6,15 @@ import LogoComponent from "./LogoComponent.vue";
 
 <template>
     <div class="footer">
+        <div class="footer-credits">
+            <LogoComponent />
+            <p>ABN: 34 411 341 964</p>
+            <p>© 2021 QUT Robotics Club</p>
+            <p>
+                Address: 920 S Block, QUT Gardens Point Campus, 2 George St, Brisbane City QLD 4000
+            </p>
+            <p>Website by Huon Swales</p>
+        </div>
         <div class="footer-content">
             <div class="footer-links">
                 <RouterLink to="/home">Home</RouterLink>
@@ -28,15 +37,6 @@ import LogoComponent from "./LogoComponent.vue";
                     <FontAwesomeIcon :icon="faLinkedin" />
                 </a>
             </div>
-        </div>
-        <div class="footer-credits">
-            <LogoComponent />
-            <p>ABN: 34 411 341 964</p>
-            <p>© 2021 QUT Robotics Club</p>
-            <p>
-                Address: 920 S Block, QUT Gardens Point Campus, 2 George St, Brisbane City QLD 4000
-            </p>
-            <p>Website by Huon Swales</p>
         </div>
     </div>
 </template>

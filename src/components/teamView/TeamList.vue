@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { groups, selectedGroup } from "@/scripts/teamList";
-import { ref } from "vue";
 </script>
 
 <template>
-    <div class="team-list">
+    <div class="team-list container">
         <div class="groups">
-            <div class="group-list container">
+            <div class="group-list">
+                <h3>Explore Teams:</h3>
                 <div
                     class="group container"
                     v-for="(group, index) in groups"
@@ -14,17 +14,26 @@ import { ref } from "vue";
                     :class="{ selected: index === selectedGroup }">
                     <p>{{ group.group }}</p>
                 </div>
+            </div>
+            <div class="group-info">
+                <h2>{{ groups[selectedGroup].group }}<span>.</span></h2>
                 <p>
                     {{ groups[selectedGroup].description }}
                 </p>
-            </div>
-        </div>
-        <div class="members">
-            <h3>{{ groups[selectedGroup].group }} crew:</h3>
-            <div class="member-list">
-                <div class="member container" v-for="member in groups[selectedGroup].members">
-                    <p>{{ member.name }}</p>
-                    <span>{{ member.role }}</span>
+                <h3>Skills:</h3>
+                <ul>
+                    <li v-for="skill in groups[selectedGroup].skills">{{ skill }}</li>
+                </ul>
+                <div class="members">
+                    <h3>{{ groups[selectedGroup].group }} crew:</h3>
+                    <div class="member-list">
+                        <div
+                            class="member container"
+                            v-for="member in groups[selectedGroup].members">
+                            <p>{{ member.name }}</p>
+                            <span>{{ member.role }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,23 +42,35 @@ import { ref } from "vue";
 
 <style scoped lang="scss">
 .team-list {
-    width: 100vw;
     height: fit-content;
-    // background-color: var(--black);
-    // border-bottom: 2px solid var(--accent);
-    padding: 20px var(--text-margin);
+    margin: 40px var(--text-margin);
+    padding: 20px;
 
     @media (max-width: 800px) {
-        padding: 20px var(--text-margin-mobile);
+        margin: 40px var(--text-margin-mobile);
     }
 
     .groups {
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+
+            .group-list {
+                margin-bottom: 10px;
+            }
+        }
+
+        h3 {
+            font-size: 26px;
+            margin: 10px 0 5px 0;
+        }
 
         .group-list {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
 
             .selected {
                 border: 2px solid var(--accent);
@@ -57,7 +78,7 @@ import { ref } from "vue";
             }
 
             .group {
-                width: fit-content;
+                width: 250px;
                 word-wrap: nowrap;
                 font-size: larger;
                 font-weight: bold;
@@ -72,16 +93,39 @@ import { ref } from "vue";
                 }
             }
         }
-    }
 
-    .members {
-        .member-list {
-            display: flex;
-            flex-wrap: wrap;
+        .group-info {
+            padding-right: 20px;
+            p {
+                font-size: 22px;
+            }
 
-            .member p {
-                font-size: large;
-                font-weight: bold;
+            ul {
+                margin-top: 0;
+
+                li {
+                    font-size: 20px;
+                }
+            }
+
+            h3 {
+                font-size: 26px;
+                margin: 10px 0 5px 0;
+            }
+
+            .member-list {
+                display: flex;
+                flex-wrap: wrap;
+
+                .member {
+                    background-color: var(--primary);
+                    box-shadow: none;
+                    margin: 10px 10px 0 0;
+
+                    p {
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

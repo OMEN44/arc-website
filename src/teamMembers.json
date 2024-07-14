@@ -2,6 +2,12 @@
     {
         "group": "Mechanical",
         "description": "The mechanical design team is responsible for designing the physical structure of the robot. This includes the frame, the drive train, and any other physical components of the robot.",
+        "skills": [
+            "SolidWorks",
+            "AutoCAD",
+            "Inventor",
+            "Fusion 360"
+        ],
         "members": [
             {
                 "name": "Tony Stark",
@@ -28,6 +34,12 @@
     {
         "group": "Software",
         "description": "The software development team is responsible for writing the code that controls the robot. This includes the autonomous code, the teleoperated code, and any other software components of the robot.",
+        "skills": [
+            "Java",
+            "C++",
+            "Python",
+            "LabVIEW"
+        ],
         "members": [
             {
                 "name": "Wanda Maximoff",
@@ -54,6 +66,12 @@
     {
         "group": "Electrical",
         "description": "The electrical design team is responsible for designing the electrical system of the robot. This includes the wiring, the sensors, and any other electrical components of the robot.",
+        "skills": [
+            "Circuit Design",
+            "PCB Design",
+            "Soldering",
+            "Arduino"
+        ],
         "members": [
             {
                 "name": "Carol Danvers",
@@ -80,6 +98,12 @@
     {
         "group": "Marketing and media",
         "description": "The sponsor relations team is responsible for building relationships with sponsors and securing funding for the team. This includes writing grant proposals, organizing fundraising events, and maintaining relationships with sponsors.",
+        "skills": [
+            "Grant Writing",
+            "Fundraising",
+            "Public Relations",
+            "Event Planning"
+        ],
         "members": [
             {
                 "name": "Captain Marvel",
@@ -96,6 +120,12 @@
     {
         "group": "Management",
         "description": "The marketing and media team is responsible for promoting the team and its activities. This includes managing social media accounts, creating promotional materials, and organizing outreach events.",
+        "skills": [
+            "Social Media Management",
+            "Graphic Design",
+            "Event Planning",
+            "Public Speaking"
+        ],
         "members": [
             {
                 "name": "Maria Hill",
@@ -122,6 +152,10 @@
     {
         "group": "Science",
         "description": "The geology science team is responsible for studying the geology of the planet and collecting samples for analysis. This includes using various instruments to study the rocks and minerals on the planet.",
+        "skills": [
+            "Geology",
+            "Geochemistry"
+        ],
         "members": [
             {
                 "name": "Sheldon Cooper",
@@ -133,6 +167,14 @@
     {
         "group": "Fabrication",
         "description": "The fabrication team is responsible for building the physical components of the robot. This includes cutting, welding, and assembling the parts of the robot.",
+        "skills": [
+            "Welding",
+            "Machining",
+            "Assembly",
+            "Painting",
+            "Finishing",
+            "3D Printing"
+        ],
         "members": [
             {
                 "name": "Howard Stark",

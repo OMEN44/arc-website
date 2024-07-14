@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CustomFooter from "@/components/CustomFooter.vue";
+import CustomFooter from "@/components/FooterComponent.vue";
 import TeamList from "@/components/teamView/TeamList.vue";
 import { groups } from "@/scripts/teamList";
 </script>
@@ -17,7 +17,7 @@ import { groups } from "@/scripts/teamList";
                 </p>
             </div>
         </div>
-        <!-- <TeamList /> -->
+        <TeamList />
         <div class="join">
             <h2>Interested in joining?</h2>
             <p>

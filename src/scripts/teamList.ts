@@ -5,6 +5,7 @@ export const groups = ref<
     Array<{
         group: string;
         description: string;
+        skills: Array<string>;
         members: Array<{ name: string; role: string | null }>;
     }>
 >(teamMembersJSON);
