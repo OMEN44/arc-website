@@ -30,5 +30,6 @@ coverage
 *.tsbuildinfo
 
 *.mp4
+*.zip
 
 resources.md

@@ -2,6 +2,48 @@
 import CustomFooter from "@/components/FooterComponent.vue";
 import TeamList from "@/components/teamView/TeamList.vue";
 import { groups } from "@/scripts/teamList";
+import { ref } from "vue";
+import emailJs from "emailjs-com";
+
+const contactForm = ref<{ name: string; email: string; role: number; message: string }>({
+    name: "",
+    email: "",
+    role: -1,
+    message: "",
+});
+
+const serviceID = "default_service";
+const templateID = "template_ptjo7zq";
+const publicKey = "tC_TZYrIVW_yXSAes";
+
+emailJs.init(publicKey);
+
+const sendEmail = (e: Event) => {
+    console.log(
+        contactForm.value.name,
+        contactForm.value.email,
+        groups.value[contactForm.value.role].group,
+        contactForm.value.message
+    );
+    console.log(e.target);
+
+    try {
+        emailJs.send(serviceID, templateID, {
+            name: contactForm.value.name,
+            email: contactForm.value.email,
+            message: `${contactForm.value.name} is interested in the ${
+                groups.value[contactForm.value.role].group
+            } team. \n\n${contactForm.value.message}`,
+        });
+    } catch (error) {
+        console.log({ error });
+    }
+    // Reset form field
+    contactForm.value.name = "";
+    contactForm.value.email = "";
+    contactForm.value.message = "";
+    contactForm.value.role = -1;
+};
 </script>
 
 <template>
@@ -11,9 +53,10 @@ import { groups } from "@/scripts/teamList";
             <div class="title container">
                 <h1>Our Team</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo voluptas
-                    alias molestiae animi officia maiores amet similique quidem, maxime deserunt
-                    aspernatur ipsam dolore officiis quaerat adipisci itaque impedit quas!
+                    We are always looking for new members to join our team. We have fun doing
+                    amazing things and supporting each other to learn new skills and grow our
+                    knowledge. If you are interest please register your interest with the form at
+                    the bottom of this page.
                 </p>
             </div>
         </div>
@@ -24,16 +67,18 @@ import { groups } from "@/scripts/teamList";
                 If you have an interest in joining our team, please fill out the form below and tell
                 us how you think you can help our team.
             </p>
-            <form @submit.prevent class="container">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <select type="text" placeholder="Role">
+            <form @submit.prevent="sendEmail" class="container">
+                <input type="text" placeholder="Name" v-model="contactForm.name" />
+                <input type="email" placeholder="Email" v-model="contactForm.email" />
+                <select type="text" placeholder="Role" v-model="contactForm.role">
                     <option value="-1">Select a role</option>
                     <option v-for="(group, index) in groups" :value="index">
                         {{ group.group }}
                     </option>
                 </select>
-                <textarea placeholder="Tell us about yourself"></textarea>
+                <textarea
+                    placeholder="Tell us about yourself"
+                    v-model="contactForm.message"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -109,6 +154,15 @@ import { groups } from "@/scripts/teamList";
         margin: 30px auto 0 auto;
         width: 400px;
         padding: 10px 5px;
+
+        @media (max-width: 800px) {
+            width: 100%;
+
+            textarea {
+                width: calc(100% - 20px);
+                resize: vertical;
+            }
+        }
 
         button {
             margin: 10px auto;

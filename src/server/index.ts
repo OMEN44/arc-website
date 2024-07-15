@@ -1,14 +1,28 @@
 import express from "express";
 import helmet from "helmet";
 import compression from "compression";
+// import cors from "cors";
 
 const app = express();
-app.use(helmet());
+// app.use(cors());
+app.use(
+    helmet({
+        contentSecurityPolicy: {
+            directives: {
+                frameSrc: ["youtube.com", "www.youtube.com"],
+            },
+        },
+    })
+);
 app.use(compression());
 
 const frontendFiles = process.cwd() + "/dist";
 app.use(express.static(frontendFiles));
-app.get("/*", (_, res) => res.sendFile(frontendFiles + "/index.html"));
+app.use((req, res, next) => {
+    if (!req.url.includes("api")) {
+        res.sendFile(frontendFiles + "/index.html");
+    } else next();
+});
 
 app.get("/api/", (_, res) => res.send("Hello from the API!"));
 

@@ -53,6 +53,7 @@ import { groups, selectedGroup } from "@/scripts/teamList";
     .groups {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
 
         @media (max-width: 800px) {
             flex-direction: column;
