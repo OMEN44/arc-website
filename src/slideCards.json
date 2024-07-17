@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Current work",
+        "description": "(70 words max) This is a description for card 1",
+        "route": "/team",
+        "image": "/image_1.jpg"
+    },
+    {
+        "title": "2024",
+        "description": "This is a description for card 2",
+        "route": "/team",
+        "image": "/image_1.jpg"
+    },
+    {
+        "title": "Card 3",
+        "description": "This is a description for card 3",
+        "route": "/team",
+        "image": "/image_1.jpg"
+    }
+]

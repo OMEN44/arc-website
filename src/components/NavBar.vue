@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
             </div>
             <div class="bottom container">
                 <span class="countdown" v-text="timer"></span>
-                <a href="https://qutrobotics.com/contact">Join us</a>
+                <RouterLink to="/team">Join the team</RouterLink>
             </div>
         </div>
     </div>
@@ -133,6 +133,15 @@ onBeforeUnmount(() => {
             justify-content: space-between;
             padding: 2px 10px;
             margin: 0;
+
+            a {
+                font-weight: bold;
+                transition: color 0.5s;
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
         }
     }
 

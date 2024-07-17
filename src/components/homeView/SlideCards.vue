@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { faChevronCircleLeft, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import CardData from "../../slideCards.json";
 import { ref } from "vue";
 
+const cards =
+    ref<Array<{ title: string; description: string; route: string | null; image: string }>>(
+        CardData
+    );
+
 const progressDot = ref<HTMLElement | null>(null);
+const cardContainer = ref<HTMLDivElement | null>(null);
 
 const onScroll = (e: Event) => {
     let percent =
@@ -12,34 +19,49 @@ const onScroll = (e: Event) => {
             ((e.target as HTMLDivElement).parentElement as HTMLDivElement).scrollWidth);
 
     if (percent > 1) percent = 1;
-    progressDot.value!.style.left = `calc(28px * ${Math.round((percent * 100) / (100 / 2))})`;
+    progressDot.value!.style.left = `calc(28px * ${Math.round(
+        (percent * 100) / (100 / (cards.value.length - 1))
+    )})`;
+};
+
+const scroll = (direction: "left" | "right") => {
+    const cardWidth = Math.round(
+        (cardContainer.value!.scrollWidth - cardContainer.value!.parentElement!.scrollWidth) *
+            (1 / (cards.value.length - 1))
+    );
+    const scrollAdjustment = cardContainer.value!.scrollLeft % cardWidth;
+
+    cardContainer.value!.scrollBy({
+        left: cardWidth * (direction === "left" ? -1 : 1) - scrollAdjustment,
+        behavior: "smooth",
+    });
 };
 </script>
 
 <template>
     <div class="slide-cards-container">
-        <FontAwesomeIcon :icon="faChevronCircleLeft" class="arrow left" />
-        <div class="cards" @scroll="onScroll">
-            <div class="card" v-for="i in 3">
+        <FontAwesomeIcon :icon="faChevronCircleLeft" class="arrow left" @click="scroll('left')" />
+        <div ref="cardContainer" class="cards" @scroll="onScroll">
+            <div class="card" v-for="card in cards">
                 <div class="second">
-                    <h2>Title<span>.</span></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                    </p>
+                    <h2>{{ card.title }}<span>.</span></h2>
+                    <p>{{ card.description }}</p>
                 </div>
                 <div class="first">
-                    <img :src="`/image_${i + 1}.jpg`" />
-                    <button>See more</button>
+                    <img :src="card.image" />
+                    <button v-if="card.route !== null">
+                        <RouterLink :to="card.route!">See more</RouterLink>
+                    </button>
                 </div>
             </div>
         </div>
-        <FontAwesomeIcon :icon="faChevronCircleRight" class="arrow right" />
+        <FontAwesomeIcon
+            :icon="faChevronCircleRight"
+            class="arrow right"
+            @click="scroll('right')" />
         <div class="progress-bar">
             <span ref="progressDot"></span>
-            <div v-for="_ in 3"></div>
+            <div v-for="_ in cards.length"></div>
         </div>
     </div>
 </template>
@@ -69,15 +91,16 @@ const onScroll = (e: Event) => {
         border-radius: 50%;
 
         @media (max-width: 800px) {
-            font-size: 30px;
+            display: none;
+            // font-size: 30px;
 
-            &.left {
-                left: 10px !important;
-            }
+            // &.left {
+            //     left: 10px !important;
+            // }
 
-            &.right {
-                right: 10px !important;
-            }
+            // &.right {
+            //     right: 10px !important;
+            // }
         }
 
         &.left {
@@ -95,6 +118,10 @@ const onScroll = (e: Event) => {
         flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: none;
+
+        @media (max-width: 800px) {
+            padding: 20px 40px;
+        }
 
         &::-webkit-scrollbar {
             display: none;
@@ -116,7 +143,7 @@ const onScroll = (e: Event) => {
 
             @media (max-width: 800px) {
                 margin-left: 20px;
-                height: 70vh;
+                height: 80vh;
             }
 
             .first {
@@ -141,6 +168,11 @@ const onScroll = (e: Event) => {
                     bottom: 20px;
                     right: 50%;
                     transform: translateX(50%);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--white);
                 }
             }
 

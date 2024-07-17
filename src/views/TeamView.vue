@@ -1,49 +1,7 @@
 <script setup lang="ts">
 import CustomFooter from "@/components/FooterComponent.vue";
 import TeamList from "@/components/teamView/TeamList.vue";
-import { groups } from "@/scripts/teamList";
-import { ref } from "vue";
-import emailJs from "emailjs-com";
-
-const contactForm = ref<{ name: string; email: string; role: number; message: string }>({
-    name: "",
-    email: "",
-    role: -1,
-    message: "",
-});
-
-const serviceID = "default_service";
-const templateID = "template_ptjo7zq";
-const publicKey = "tC_TZYrIVW_yXSAes";
-
-emailJs.init(publicKey);
-
-const sendEmail = (e: Event) => {
-    console.log(
-        contactForm.value.name,
-        contactForm.value.email,
-        groups.value[contactForm.value.role].group,
-        contactForm.value.message
-    );
-    console.log(e.target);
-
-    try {
-        emailJs.send(serviceID, templateID, {
-            name: contactForm.value.name,
-            email: contactForm.value.email,
-            message: `${contactForm.value.name} is interested in the ${
-                groups.value[contactForm.value.role].group
-            } team. \n\n${contactForm.value.message}`,
-        });
-    } catch (error) {
-        console.log({ error });
-    }
-    // Reset form field
-    contactForm.value.name = "";
-    contactForm.value.email = "";
-    contactForm.value.message = "";
-    contactForm.value.role = -1;
-};
+import ContactUs from "@/components/teamView/ContactUs.vue";
 </script>
 
 <template>
@@ -67,20 +25,7 @@ const sendEmail = (e: Event) => {
                 If you have an interest in joining our team, please fill out the form below and tell
                 us how you think you can help our team.
             </p>
-            <form @submit.prevent="sendEmail" class="container">
-                <input type="text" placeholder="Name" v-model="contactForm.name" />
-                <input type="email" placeholder="Email" v-model="contactForm.email" />
-                <select type="text" placeholder="Role" v-model="contactForm.role">
-                    <option value="-1">Select a role</option>
-                    <option v-for="(group, index) in groups" :value="index">
-                        {{ group.group }}
-                    </option>
-                </select>
-                <textarea
-                    placeholder="Tell us about yourself"
-                    v-model="contactForm.message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+            <ContactUs />
         </div>
         <CustomFooter />
     </div>
@@ -145,31 +90,6 @@ const sendEmail = (e: Event) => {
             button {
                 margin: 5px 10px auto 10px;
             }
-        }
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        margin: 30px auto 0 auto;
-        width: 400px;
-        padding: 10px 5px;
-
-        @media (max-width: 800px) {
-            width: 100%;
-
-            textarea {
-                width: calc(100% - 20px);
-                resize: vertical;
-            }
-        }
-
-        button {
-            margin: 10px auto;
-        }
-
-        textarea {
-            max-width: 370px;
         }
     }
 }

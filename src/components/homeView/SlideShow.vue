@@ -1,33 +1,22 @@
 <script setup lang="ts">
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import slidesJSON from "../../slideShow.json";
 
 const playSlideShow = ref<boolean>(true);
 const slideShowIndex = ref<number>(0);
 let interval: NodeJS.Timeout | undefined = undefined;
 
-const slides = ref<Array<{ path: string; title: string; text: string }>>(slidesJSON);
+const slides =
+    ref<Array<{ path: string; title: string; text: string; route: string | null }>>(slidesJSON);
 
 onMounted(() => {
-    document.getElementById("slide-show")!.style.backgroundImage = `url(${
-        slides.value[slideShowIndex.value].path
-    })`;
     interval = setInterval(() => {
         if (playSlideShow.value) {
             slideShowIndex.value = (slideShowIndex.value + 1) % slides.value.length;
-            document.getElementById("slide-show")!.style.backgroundImage = `url(${
-                slides.value[slideShowIndex.value].path
-            })`;
         }
     }, 5000);
-});
-
-watch(slideShowIndex, () => {
-    document.getElementById("slide-show")!.style.backgroundImage = `url(${
-        slides.value[slideShowIndex.value].path
-    })`;
 });
 
 onBeforeUnmount(() => {
@@ -37,10 +26,13 @@ onBeforeUnmount(() => {
 
 <template>
     <div id="slide-show" class="slide-show">
+        <img :src="slides[slideShowIndex].path" />
         <div class="slide-info container">
             <div class="slide-title">
                 <h1>{{ slides[slideShowIndex].title }}</h1>
-                <button>See more</button>
+                <button v-if="slides[slideShowIndex].route !== null">
+                    <RouterLink :to="slides[slideShowIndex].route!">See more</RouterLink>
+                </button>
             </div>
             <p v-text="slides[slideShowIndex].text"></p>
             <div class="slide-icons">
@@ -66,13 +58,22 @@ onBeforeUnmount(() => {
     overflow-x: hidden;
     width: 100vw;
     height: 70vh;
-    background-image: url("/public/image_7.jpg") bottom;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
 
     .slide-info {
+        position: absolute;
+        z-index: 3;
         width: fit-content;
         max-width: 60vw;
         box-shadow: 0 0 20px black;
@@ -83,6 +84,11 @@ onBeforeUnmount(() => {
 
         .slide-title {
             display: flex;
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+            }
 
             h1 {
                 font-size: 30px;
