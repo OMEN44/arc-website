@@ -2,7 +2,7 @@
 
 <template>
     <div class="title container">
-        <h1>Project Olympus</h1>
+        <h1>R.O.A.R.</h1>
         <p>QUTRC ROVER TEAM</p>
     </div>
 </template>

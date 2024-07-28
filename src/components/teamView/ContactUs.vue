@@ -16,7 +16,7 @@ const publicKey = "tC_TZYrIVW_yXSAes";
 
 emailJs.init(publicKey);
 
-const sendEmail = (e: Event) => {
+const sendEmail = () => {
     try {
         emailJs.send(serviceID, templateID, {
             name: contactForm.value.name,
@@ -65,6 +65,7 @@ form {
         textarea {
             width: calc(100% - 20px);
             resize: vertical;
+            max-width: none !important;
         }
     }
 

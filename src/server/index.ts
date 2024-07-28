@@ -24,6 +24,4 @@ app.use((req, res, next) => {
     } else next();
 });
 
-app.get("/api/", (_, res) => res.send("Hello from the API!"));
-
 app.listen(8000, () => console.log("Listening at http://localhost:8000/api/"));

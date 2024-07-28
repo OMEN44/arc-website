@@ -16,6 +16,12 @@ const router = createRouter({
             component: () => import("../views/TeamView.vue"),
         },
         {
+            path: "/rover",
+            name: "rover",
+            // Lazy loading
+            component: () => import("../views/RoverView.vue"),
+        },
+        {
             path: "/:pathMatch(.*)*",
             name: "notFound",
             redirect: { name: "home" },

@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
                 <div class="navigation-links">
                     <RouterLink class="link" to="/home">Home</RouterLink>
                     <RouterLink class="link" to="/team">Team</RouterLink>
-                    <RouterLink class="link" to="/home">Rover</RouterLink>
+                    <RouterLink class="link" to="/rover">Rover</RouterLink>
                 </div>
                 <div class="social-media-links">
                     <a href="https://www.facebook.com/QUTRoboticsClub">
@@ -136,10 +136,11 @@ onBeforeUnmount(() => {
 
             a {
                 font-weight: bold;
-                transition: color 0.5s;
+                transition: transform 0.5s;
+                color: var(--accent);
 
                 &:hover {
-                    color: var(--accent);
+                    transform: scale(1.1);
                 }
             }
         }

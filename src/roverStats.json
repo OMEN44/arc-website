@@ -1,0 +1,38 @@
+[
+    {
+        "roverName": "perseus",
+        "title": "Size",
+        "content": "1m x 0.5m x 0.5m",
+        "icon": 0
+    },
+    {
+        "roverName": "perseus",
+        "title": "Weight",
+        "content": "really heavy",
+        "icon": 1
+    },
+    {
+        "roverName": "perseus",
+        "title": "Top speed",
+        "content": "faster than you expect",
+        "icon": 2
+    },
+    {
+        "roverName": "perseus",
+        "title": "Years at comp",
+        "content": "2 years",
+        "icon": 3
+    },
+    {
+        "roverName": "perseus",
+        "title": "Materials",
+        "content": "Aluminium, 3D prints, and acrylic",
+        "icon": 4
+    },
+    {
+        "roverName": "artemis",
+        "title": "Size",
+        "content": "1m x 0.5m x 0.5m",
+        "icon": 0
+    }
+]

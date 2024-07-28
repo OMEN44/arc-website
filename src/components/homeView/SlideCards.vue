@@ -29,7 +29,9 @@ const scroll = (direction: "left" | "right") => {
         (cardContainer.value!.scrollWidth - cardContainer.value!.parentElement!.scrollWidth) *
             (1 / (cards.value.length - 1))
     );
-    const scrollAdjustment = cardContainer.value!.scrollLeft % cardWidth;
+
+    // idk man, the +1 here just makes it work
+    const scrollAdjustment = (cardContainer.value!.scrollLeft + 1) % cardWidth;
 
     cardContainer.value!.scrollBy({
         left: cardWidth * (direction === "left" ? -1 : 1) - scrollAdjustment,
