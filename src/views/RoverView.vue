@@ -6,9 +6,9 @@ import {
     faCalendar,
     faDashboard,
     faDumbbell,
+    faPlug,
     faRuler,
     faTools,
-    faWeight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "vue";
@@ -30,18 +30,24 @@ const stats =
 const selected = ref<number>(-1);
 const selectedRover = ref<string>("perseus");
 
-const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools]);
+const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools, faPlug]);
 </script>
 
 <template>
     <div style="overflow-x: hidden">
-        <WelcomeBanner title="Rover" description="aosdnaosndoasd" image="/image_6.jpg" />
+        <WelcomeBanner
+            title="Our Rover"
+            description="The Australian Rover Challenge takes course over four days and requires a robust capable rover to complete a wide range of tasks. The tasks include anything from driving the rover to collecting samples to the rover working fully autonomously."
+            image="/image_6.jpg" />
         <div class="about container">
             <h2>Meet Perseus<span>.</span></h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates distinctio fugit
-                nam aliquam, perferendis nihil provident quaerat sequi, sapiente temporibus libero
-                quod. Alias eum porro architecto corporis, quae tenetur quibusdam.
+                The Perseus project represents Queensland University of Technology Robotics Club's
+                (QUTRC) desire to field a second-generation rover (Perseus) in the Australian Rover
+                Challenge in 2024 (Competition) and meet or exceed the requirements of each task in
+                the Competition. The current design for Perseus is a four-wheeled custom
+                manufactured rover with modular sub-systems and an architecture which preferences
+                robustness.
             </p>
         </div>
         <div class="rover-container">
@@ -91,6 +97,7 @@ const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools]);
 .about {
     margin: 20px var(--text-margin);
     font-size: 20px;
+    padding: 20px;
 
     @media (max-width: 800px) {
         margin: 10px;
@@ -164,22 +171,25 @@ const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools]);
 .element-desciption {
     margin: 20px var(--text-margin);
     font-size: 20px;
+    padding: 20px;
 
     @media (max-width: 800px) {
         margin: 10px;
     }
 }
 .rover-stats {
-    margin: 40px var(--text-margin) 0 var(--text-margin);
+    padding: 40px var(--text-margin) 20px var(--text-margin);
+    background: var(--black);
+    border: 2px var(--accent);
+    border-style: solid none;
 
     @media (max-width: 800px) {
-        margin: 30px 30px 0 30px;
+        padding: 20px var(--text-margin-mobile) 0 var(--text-margin-mobile);
     }
 
     .stats {
         display: flex;
         flex-wrap: wrap;
-        grid-template-columns: auto auto auto;
         width: fit-content;
 
         @media (max-width: 800px) {
@@ -204,6 +214,7 @@ const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools]);
 
     .contact {
         font-size: 18px;
+        margin: 5px 20px;
     }
 }
 </style>

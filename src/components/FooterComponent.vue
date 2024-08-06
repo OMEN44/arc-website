@@ -8,7 +8,6 @@ import LogoComponent from "./LogoComponent.vue";
     <div class="footer">
         <div class="footer-credits">
             <LogoComponent />
-            <p>ABN: 34 411 341 964</p>
             <p>© 2021 QUT Robotics Club</p>
             <p>
                 Address: 920 S Block, QUT Gardens Point Campus, 2 George St, Brisbane City QLD 4000

@@ -82,8 +82,8 @@ h2 {
     }
 }
 
-.container {
-    box-shadow: 0 0 10px black;
+.container {    box-shadow: 3px 3px 3px rgba($color: #000000, $alpha: 0.2);
+
     background-color: var(--secondary);
     border-radius: var(--radius);
     padding: 10px;

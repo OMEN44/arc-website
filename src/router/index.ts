@@ -22,6 +22,12 @@ const router = createRouter({
             component: () => import("../views/RoverView.vue"),
         },
         {
+            path: "/contact",
+            name: "contact",
+            // Lazy loading
+            component: () => import("../views/ContactView.vue"),
+        },
+        {
             path: "/:pathMatch(.*)*",
             name: "notFound",
             redirect: { name: "home" },

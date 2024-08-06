@@ -41,19 +41,20 @@ onBeforeUnmount(() => {
                 <div class="navigation-links">
                     <RouterLink class="link" to="/home">Home</RouterLink>
                     <RouterLink class="link" to="/team">Team</RouterLink>
-                    <RouterLink class="link" to="/rover">Rover</RouterLink>
+                    <RouterLink class="link" to="/rover">Rovers</RouterLink>
                 </div>
                 <div class="social-media-links">
-                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                    <a href="https://www.instagram.com/qut.roboticsclub/">
                         <FontAwesomeIcon :icon="faInstagram" />
                     </a>
                     <a href="https://www.facebook.com/QUTRoboticsClub">
                         <FontAwesomeIcon :icon="faFacebook" />
                     </a>
-                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                    <a href="https://www.tiktok.com/@qutroboticsclub">
                         <FontAwesomeIcon :icon="faTiktok" />
                     </a>
-                    <a href="https://www.facebook.com/QUTRoboticsClub">
+                    <a
+                        href="https://www.linkedin.com/company/qut-robotics-club/?originalSubdomain=au">
                         <FontAwesomeIcon :icon="faLinkedin" />
                     </a>
                 </div>
