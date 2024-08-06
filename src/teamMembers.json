@@ -1,7 +1,30 @@
 [
     {
+        "group": "Project Management & Liason",
+        "description": "The ROAR Team Leadership is tasked with the accountibility to deliver a competitive performance. This includes adminstration, logistics and setting goals & objectives, managing schedules and anything else that crops up.",
+        "skills": [
+            "Project Management",
+            "Report Drafting",
+            "Communication",
+            "Public Speaking"
+        ],
+        "members": [
+            {
+                "name": "Aidan Lipinski",
+                "role": "ROAR Team Leader",
+                "image": "/aidan_lipinski.jpg"
+            },
+            {
+                "name": "Nigel Hungerford-Symes",
+                "role": "ROAR Project Manager",
+                "image": "/nigel_hungerford-symes.jpg"
+            }
+            
+        ]
+    },
+    {
         "group": "Mechanical & Fabrication",
-        "description": "The mechanical design & fabrication stream is responsible for designing the physical structure of the robot and working with other streams to bring ideas to physical reality.",
+        "description": "The Mechanical Design & Fabrication team is responsible for designing the physical structure of the rover and working with other teams to bring ideas to physical reality.",
         "skills": [
             "OnShape",            
             "Handtools",
@@ -12,7 +35,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Mechanical Stream Lead",
+                "role": "Mechanical Subsystem Lead",
                 "image": "/unknown_person.gif"
             },
             {
@@ -24,7 +47,7 @@
     },
     {
         "group": "Software",
-        "description": "The software development team is responsible for writing the code that controls the robot. This includes the autonomous code, the teleoperated code, and any other software components of the robot.",
+        "description": "The software development team is responsible for writing the code that controls the rover, including the autonomy, teleoperations, and any other software components.",
         "skills": [
             "ROS2 Humble",
             "Python",
@@ -36,7 +59,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Software Stream Lead",
+                "role": "Software Subsystem Lead",
                 "image": "/unknown_person.gif"
             },
             {
@@ -70,14 +93,14 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Firmware Stream Lead",
+                "role": "Firmware Subsystem Lead",
                 "image": "/unknown_person.gif"
             }
         ]
     },
     {
         "group": "Electrical",
-        "description": "Circuit design and manufacture. This includes the wiring, the sensors, and any other electrical components of the robot.",
+        "description": "The Electrical Team does all the circuit designing and manufacturing, including the wiring, the sensors, and any other electrical components of the rover.",
         "skills": [
             "Circuit Design",
             "PCB Design - Altium",
@@ -88,7 +111,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Electrical Stream Lead",
+                "role": "Electrical Subsystem Lead",
                 "image": "/unknown_person.gif"
             },
             {
@@ -100,7 +123,7 @@
     },
     {
         "group": "Marketing and Sponsor Relations",
-        "description": "The sponsor relations team is responsible for building relationships with sponsors and securing funding for the team. This includes writing grant proposals, organizing fundraising events, and maintaining relationships with sponsors.",
+        "description": "The Sponsor Relations team is responsible for building relationships with sponsors and securing funding for the team. This includes writing grant proposals, organizing fundraising events, and maintaining relationships with sponsors.",
         "skills": [
             "Grant Writing",
             "Fundraising",
@@ -110,7 +133,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Marketing Stream Lead",
+                "role": "Marketing Lead",
                 "image": "/unknown_person.gif"
             },
             {
@@ -126,29 +149,6 @@
         ]
     },
     {
-        "group": "Project Management & Liason",
-        "description": "The ROAR project leadership is tasked with the accountibility to deliver a competative performance. This includes adminstration, logistics and setting goals & objectives, managing timeschedules and anything else that crops up.",
-        "skills": [
-            "Project Management",
-            "Report Drafting",
-            "Communication",
-            "Public Speaking"
-        ],
-        "members": [
-            {
-                "name": "Aidan Lipinski",
-                "role": "ROAR Team Leader",
-                "image": "/aidan_lipinski.jpg"
-            },
-            {
-                "name": "Nigel Hungerford-Symes",
-                "role": "ROAR Project Manager",
-                "image": "/nigel_hungerford-symes.jpg"
-            }
-            
-        ]
-    },
-    {
         "group": "Space Resources",
         "description": "Designing, building and testing specific apparatus to attach to the rover to meet the goals of the Competition rules with respect to collecting water, sampling lunar simulant and detecting minerals.",
         "skills": [
@@ -161,7 +161,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Offworld Geology Stream Lead",
+                "role": "Offworld Geology Payload Lead",
                 "image": "/unknown_person.gif"
             }
         ]
@@ -179,7 +179,7 @@
         "members": [
             {
                 "name": "<Currently Open>",
-                "role": "Manipulation Stream Lead",
+                "role": "Manipulation Payload Lead",
                 "image": "/unknown_person.gif"
             }
         ]

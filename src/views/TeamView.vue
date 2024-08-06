@@ -11,9 +11,9 @@ import ContactUs from "@/components/teamView/ContactUs.vue";
             <div class="title container">
                 <h1>Our Team</h1>
                 <p>
-                    We are always looking for new members to join our team. We have fun doing
-                    amazing things and supporting each other to learn new skills and grow our
-                    knowledge. If you are interest please register your interest with the form at
+                    We're always looking for new members to join our team! We love to learn new skills
+                    while supporting each other to grow our knowledge (and it's super fun)!
+                    If you're interested please register your interest with the form at
                     the bottom of this page.
                 </p>
             </div>

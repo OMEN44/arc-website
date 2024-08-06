@@ -1,20 +1,20 @@
 [
     {
         "title": "Current work",
-        "description": "(70 words max) This is a description for card 1",
+        "description": "We're currently working on our 2025 Australian Rover Challenge Entry, with a focus on the software and science subsystem. We're growing our team, so come get involved!",
         "route": "/team",
-        "image": "/image_1.jpg"
+        "image": "/teamworking.JPG"
     },
     {
         "title": "2024",
-        "description": "This is a description for card 2",
+        "description": "The ROAR Team achieved a fantastic 4th place, with the brand new Perseus, and with the help of our mini-rover Talaria!",
         "route": "/team",
-        "image": "/image_1.jpg"
+        "image": "/rovercinematic.JPG"
     },
     {
         "title": "2023",
-        "description": "This is a description for card 3",
+        "description": "The ROAR Team's first year saw Artemis compete, winning 4th place!",
         "route": "/team",
-        "image": "/image_1.jpg"
+        "image": "/artemis.jpg"
     }
 ]
