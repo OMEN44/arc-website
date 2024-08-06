@@ -1,14 +1,14 @@
 [
     { 
         "path": "/roveronhill.jpg", 
-        "title": "Perseus rover", 
-        "text": "We are currently working on our second rover Perseus. After learning from what worked and what didn't on our last rover we are working towards a more robust and capable rover.",
+        "title": "Perseus Rover", 
+        "text": "Our current rover, Perseus, is our second rover, building on Artemis to be more robust and capable.",
         "route": null 
     },
     { 
-        "path": "/image_6.jpg", 
+        "path": "/2024rover.jpg", 
         "title": "2024 Competition", 
-        "text": "Since the teams formation in 2021 we have performed very well at the Australian Rover Challenge and look forwards to competing again.",
+        "text": "Our team has performed very well at the Australian Rover Challenge, placing fourth in the 2023 and 2024 competitions, and we look forward to competing in 2025!",
         "route": null
     },
     { 
