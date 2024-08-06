@@ -19,20 +19,20 @@
     },
     {
         "roverName": "perseus",
-        "title": "Years at comp",
+        "title": "Years Competing",
         "content": "2 years",
         "icon": 3
     },
     {
         "roverName": "perseus",
         "title": "Materials",
-        "content": "Aluminium, 3D prints, and acrylic",
+        "content": "Aluminium, 3D prints and acrylic",
         "icon": 4
     },
     {
         "roverName": "perseus",
         "title": "Interchangeable Modules",
-        "content": "Excavation, Post landing, Science, Light tower",
+        "content": "Excavation, Post-Landing, Science, Light Tower",
         "icon": 5
     },
     {

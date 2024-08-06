@@ -37,14 +37,14 @@ const icons = ref([faRuler, faDumbbell, faDashboard, faCalendar, faTools, faPlug
     <div style="overflow-x: hidden">
         <WelcomeBanner
             title="Our Rover"
-            description="The Australian Rover Challenge takes course over four days and requires a robust capable rover to complete a wide range of tasks. The tasks include anything from driving the rover to collecting samples to the rover working fully autonomously."
-            image="/image_6.jpg" />
+            description="The Australian Rover Challenge takes place over four days, requiring a robust and capable rover to complete a wide range of tasks. The tasks include anything from driving the rover, to collecting samples, to the rover working fully autonomously."
+            image="/rfid.JPG" />
         <div class="about container">
             <h2>Meet Perseus<span>.</span></h2>
             <p>
-                The Perseus project represents Queensland University of Technology Robotics Club's
-                (QUTRC) desire to field a second-generation rover (Perseus) in the Australian Rover
-                Challenge in 2024 (Competition) and meet or exceed the requirements of each task in
+                The Perseus project represents the QUT Robotics Club's
+                desire to field a second-generation rover (Perseus) in the 2024 Australian Rover
+                Challenge and meet or exceed the requirements of each task in
                 the Competition. The current design for Perseus is a four-wheeled custom
                 manufactured rover with modular sub-systems and an architecture which preferences
                 robustness.
