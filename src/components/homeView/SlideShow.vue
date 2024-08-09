@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
 .slide-show {
     overflow-x: hidden;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     background-size: cover;
     display: flex;
     flex-direction: column;

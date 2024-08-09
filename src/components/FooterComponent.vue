@@ -17,10 +17,8 @@ import LogoComponent from "./LogoComponent.vue";
         <div class="footer-content">
             <div class="footer-links">
                 <RouterLink to="/home">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-                <RouterLink to="/projects">Projects</RouterLink>
-                <RouterLink to="/sponsors">Sponsors</RouterLink>
-                <RouterLink to="/contact">Contact</RouterLink>
+                <RouterLink to="/team">Team</RouterLink>
+                <RouterLink to="/rover">Rover</RouterLink>
             </div>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/QUTRoboticsClub">

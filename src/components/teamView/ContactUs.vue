@@ -22,7 +22,9 @@ const sendEmail = () => {
             name: contactForm.value.name,
             email: contactForm.value.email,
             message: `${contactForm.value.name} is interested in the ${
-                groups.value[contactForm.value.role].group
+                contactForm.value.role === -1
+                    ? "not sure yet"
+                    : groups.value[contactForm.value.role].group
             } team. \n\n${contactForm.value.message}`,
         });
     } catch (error) {
@@ -41,7 +43,7 @@ const sendEmail = () => {
         <input type="text" placeholder="Name" v-model="contactForm.name" />
         <input type="email" placeholder="Email" v-model="contactForm.email" />
         <select type="text" placeholder="Role" v-model="contactForm.role">
-            <option value="-1">Select a role</option>
+            <option value="-1">Not sure yet</option>
             <option v-for="(group, index) in groups" :value="index">
                 {{ group.group }}
             </option>

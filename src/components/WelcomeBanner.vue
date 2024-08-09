@@ -19,7 +19,7 @@ defineProps<{ title: string; description: string; image: string; placeholder: st
 <style scoped lang="scss">
 .welcome {
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     border-bottom: 2px solid var(--accent);
     position: relative;
     background-color: var(--black);

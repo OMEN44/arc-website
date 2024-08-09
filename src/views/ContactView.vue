@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ImageWrapper from "@/components/ImageWrapper.vue";
 import ContactUs from "@/components/teamView/ContactUs.vue";
 </script>
 
@@ -15,7 +14,6 @@ import ContactUs from "@/components/teamView/ContactUs.vue";
             </p>
         </div>
         <ContactUs />
-        <ImageWrapper image="/artemis.JPG" placeholder="/placeholders/artemis-smol.jpg" />
     </div>
 </template>
 
