@@ -3,6 +3,7 @@ import { faChevronCircleLeft, faChevronCircleRight } from "@fortawesome/free-sol
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import CardData from "../../slideCards.json";
 import { ref } from "vue";
+import VLazyImage from "v-lazy-image";
 
 const cards =
     ref<Array<{ title: string; description: string; route: string | null; image: string }>>(
@@ -50,7 +51,11 @@ const scroll = (direction: "left" | "right") => {
                     <p>{{ card.description }}</p>
                 </div>
                 <div class="first">
-                    <img :src="card.image" />
+                    <VLazyImage
+                        :src="card.image"
+                        :src-placeholder="`/placeholders${card.image
+                            .toLowerCase()
+                            .replace('.jpg', '-smol.jpg')}`" />
                     <button v-if="card.route !== null">
                         <RouterLink :to="card.route!">See more</RouterLink>
                     </button>
@@ -157,12 +162,6 @@ const scroll = (direction: "left" | "right") => {
                 @media (max-width: 800px) {
                     width: 100%;
                     height: 30%;
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
                 }
 
                 button {

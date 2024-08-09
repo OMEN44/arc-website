@@ -3,6 +3,7 @@ import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import slidesJSON from "../../slideShow.json";
+import VLazyImage from "v-lazy-image";
 
 const playSlideShow = ref<boolean>(true);
 const slideShowIndex = ref<number>(0);
@@ -26,7 +27,11 @@ onBeforeUnmount(() => {
 
 <template>
     <div id="slide-show" class="slide-show">
-        <img :src="slides[slideShowIndex].path" />
+        <VLazyImage
+            :src="slides[slideShowIndex].path"
+            :src-placeholder="`/placeholders${slides[slideShowIndex].path
+                .toLowerCase()
+                .replace('.jpg', '-smol.jpg')}`" />
         <div class="slide-info container">
             <div class="slide-title">
                 <h1>{{ slides[slideShowIndex].title }}</h1>
@@ -46,7 +51,11 @@ onBeforeUnmount(() => {
                     v-for="(slide, index) in slides"
                     :class="{ active: index === slideShowIndex }"
                     @click="slideShowIndex = index">
-                    <img :src="slide.path" alt="" />
+                    <VLazyImage
+                        :src="slide.path"
+                        :src-placeholder="`/placeholders${slide.path
+                            .toLowerCase()
+                            .replace('.jpg', '-smol.jpg')}`" />
                 </span>
             </div>
         </div>
@@ -63,13 +72,6 @@ onBeforeUnmount(() => {
     flex-direction: column;
     justify-content: end;
     position: relative;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
 
     .slide-info {
         position: absolute;
@@ -176,11 +178,6 @@ onBeforeUnmount(() => {
             @media (max-width: 800px) {
                 width: 40px;
                 height: 40px;
-            }
-
-            img {
-                object-fit: cover;
-                height: 100%;
             }
         }
     }

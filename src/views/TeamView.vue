@@ -2,19 +2,22 @@
 import CustomFooter from "@/components/FooterComponent.vue";
 import TeamList from "@/components/teamView/TeamList.vue";
 import ContactUs from "@/components/teamView/ContactUs.vue";
+import VLazyImage from "v-lazy-image";
 </script>
 
 <template>
     <div class="team-view">
         <div class="welcome">
-            <img src="/image_4.jpg" />
+            <VLazyImage
+                src="/aidanonhill.jpg"
+                src-placeholder="/placeholder/aidanonhill-smoll.jpg" />
             <div class="title container">
                 <h1>Our Team</h1>
                 <p>
-                    We're always looking for new members to join our team! We love to learn new skills
-                    while supporting each other to grow our knowledge (and it's super fun)!
-                    If you're interested please register your interest with the form at
-                    the bottom of this page.
+                    We're always looking for new members to join our team! We love to learn new
+                    skills while supporting each other to grow our knowledge (and it's super fun)!
+                    If you're interested please register your interest with the form at the bottom
+                    of this page.
                 </p>
             </div>
         </div>
@@ -41,14 +44,6 @@ import ContactUs from "@/components/teamView/ContactUs.vue";
         border-bottom: 2px solid var(--accent);
         position: relative;
         background-color: var(--black);
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 0.5;
-        }
 
         .title {
             position: absolute;

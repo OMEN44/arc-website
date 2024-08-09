@@ -3,7 +3,7 @@
         "path": "/roveronhill.JPG", 
         "title": "Perseus Rover", 
         "text": "Meet our rover, Perseus! He's our second rover, building on Artemis to be more robust and capable.",
-        "route": null 
+        "route": "/rover" 
     },
     { 
         "path": "/2024rover.JPG", 

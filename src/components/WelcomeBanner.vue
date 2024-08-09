@@ -1,10 +1,14 @@
 <script setup lang="ts">
-defineProps<{ title: string; description: string; image: string }>();
+import VLazyImage from "v-lazy-image";
+
+defineProps<{ title: string; description: string; image: string; placeholder: string }>();
 </script>
 
 <template>
     <div class="welcome">
-        <img :src="image" />
+        <div class="image-wrapper">
+            <VLazyImage :src="image" :src-placeholder="placeholder" />
+        </div>
         <div class="title container">
             <h1>{{ title }}</h1>
             <p>{{ description }}</p>
@@ -21,7 +25,7 @@ defineProps<{ title: string; description: string; image: string }>();
     background-color: var(--black);
     overflow: hidden;
 
-    img {
+    .image-wrapper {
         width: 100%;
         height: 100%;
         object-fit: cover;

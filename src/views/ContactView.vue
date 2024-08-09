@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ImageWrapper from "@/components/ImageWrapper.vue";
 import ContactUs from "@/components/teamView/ContactUs.vue";
 </script>
 
@@ -9,17 +10,16 @@ import ContactUs from "@/components/teamView/ContactUs.vue";
             <p>
                 If you're interested in joining our team or have questions about what we do, use the
                 form below to get in touch! To see more about the team and see where you can help,
-                have a look our Team Page, and if you have questions about the rover, check out the Rover
-                Page.
+                have a look our Team Page, and if you have questions about the rover, check out the
+                Rover Page.
             </p>
         </div>
         <ContactUs />
+        <ImageWrapper image="/artemis.JPG" placeholder="/placeholders/artemis-smol.jpg" />
     </div>
 </template>
 
 <style scoped lang="scss">
-div {
-}
 .contact-us-message {
     margin: 20px var(--text-margin);
 }
