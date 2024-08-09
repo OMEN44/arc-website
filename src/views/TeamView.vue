@@ -8,9 +8,7 @@ import VLazyImage from "v-lazy-image";
 <template>
     <div class="team-view">
         <div class="welcome">
-            <VLazyImage
-                src="/aidanonhill.jpg"
-                src-placeholder="/placeholder/aidanonhill-smoll.jpg" />
+            <VLazyImage src="/team.JPG" src-placeholder="/placeholder/team-smol.jpg" />
             <div class="title container">
                 <h1>Our Team</h1>
                 <p>
