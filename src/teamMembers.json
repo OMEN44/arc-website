@@ -51,7 +51,7 @@
         "skills": [
             "ROS2 Humble",
             "Python",
-            "C",
+            "C++",
             "Ubuntu 22.04",
             "Git",
             "Testing"                                  
@@ -106,7 +106,7 @@
             "PCB Design - Altium",
             "Soldering and PCB population",
             "ESP32",
-            "Part slection and sourcing"
+            "Part selection and sourcing"
         ],
         "members": [
             {

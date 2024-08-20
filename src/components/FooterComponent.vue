@@ -8,7 +8,7 @@ import LogoComponent from "./LogoComponent.vue";
     <div class="footer">
         <div class="footer-credits">
             <LogoComponent />
-            <p>© 2021 QUT Robotics Club</p>
+            <p>© 2024 QUT Robotics Club</p>
             <p>
                 Address: 920 S Block, QUT Gardens Point Campus, 2 George St, Brisbane City QLD 4000
             </p>

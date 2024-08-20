@@ -12,18 +12,18 @@ import CustomFooter from "@/components/FooterComponent.vue";
                 <h2>Our journey so far...</h2>
                 <p>
                     In 2022, the QUT Robotics Club set the goal of competing in the Australian Rover
-                    Challenge (ARCh) hosted by the University of Adelaide across all four categories:
-                    robotic manipulation, in-situ resource utilisation, offworld geology and
-                    autonomous operation.
+                    Challenge (ARCh) hosted by the University of Adelaide across all four
+                    categories: robotic manipulation, in-situ resource utilisation, offworld geology
+                    and autonomous operation.
                     <br />
-                    In 2023 we competed with our first rover Artemis, a 6 wheeled 50kg rocker bogie design
-                    , placing fourth and winning the Best New Team Award!
+                    In 2023 we competed with our first rover Artemis, a 6 wheeled 50kg rocker bogie
+                    design , placing fourth and winning the Best New Team Award!
                     <br />
-                    For the 2024 competition, we debuted Perseus, a completely redesigned rover, building on our 
-                    2023 experience. Perseus is a 4 wheeled, 40kg modeular rover, and competed well in all four events,
-                    placing fourth!
+                    For the 2024 competition, we debuted Perseus, a completely redesigned rover,
+                    building on our 2023 experience. Perseus is a 4 wheeled, 40kg modular rover, and
+                    competed well in all four events, placing fourth!
                     <br />
-                    With the QUT Robotics Club's 15 year tradition of learning and sharing we have
+                    With the QUT Robotics Club's 13 year tradition of learning and sharing we have
                     demonstrated both Perseus and Artemis at various Open Days, school events,
                     robotic competitions and CSIRO showcases.
                     <br />
@@ -56,9 +56,7 @@ import CustomFooter from "@/components/FooterComponent.vue";
                     </div>
                     <div class="card container">
                         <h3>2024 -</h3>
-                        <p>
-                            Debuting a brand new platform with Perseus, and placing fourth!
-                        </p>
+                        <p>Debuting a brand new platform with Perseus, and placing fourth!</p>
                     </div>
                 </div>
             </div>
