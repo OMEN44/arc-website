@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { groups } from "@/scripts/teamList";
 import { ref } from "vue";
-import emailJs from "emailjs-com";
+import emailJs from "@emailjs/browser";
 
 const contactForm = ref<{ name: string; email: string; role: number; message: string }>({
     name: "",
@@ -10,23 +10,26 @@ const contactForm = ref<{ name: string; email: string; role: number; message: st
     message: "",
 });
 
-const serviceID = "service_nwue3ql";
-const templateID = "template_ptjo7zq";
-const publicKey = "tC_TZYrIVW_yXSAes";
-
-emailJs.init(publicKey);
+emailJs.init({
+    publicKey: import.meta.env.VITE_APP_EMAILJS_KEY,
+    limitRate: { id: "app", throttle: 86400000 },
+});
 
 const sendEmail = () => {
     try {
-        emailJs.send(serviceID, templateID, {
-            name: contactForm.value.name,
-            email: contactForm.value.email,
-            message: `${contactForm.value.name} is interested in the ${
-                contactForm.value.role === -1
-                    ? "not sure yet"
-                    : groups.value[contactForm.value.role].group
-            } team. \n\n${contactForm.value.message}`,
-        });
+        emailJs.send(
+            import.meta.env.VITE_APP_EMAILJS_SERVICE,
+            import.meta.env.VITE_APP_EMAILJS_TEMPLATE,
+            {
+                name: contactForm.value.name,
+                email: contactForm.value.email,
+                message: `${
+                    contactForm.value.role === -1
+                        ? "not sure yet"
+                        : groups.value[contactForm.value.role].group
+                } team. \n\n${contactForm.value.message}`,
+            }
+        );
     } catch (error) {
         console.log({ error });
     }

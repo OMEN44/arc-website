@@ -1,0 +1,20 @@
+[
+    { 
+        "path": "/roveronhill.JPG", 
+        "title": "Perseus Rover", 
+        "text": "Meet our rover, Perseus! He's our second rover, building on Artemis to be more robust and capable.",
+        "route": "/rover" 
+    },
+    { 
+        "path": "/2024rover.JPG", 
+        "title": "2024 Competition", 
+        "text": "Our team has performed very well at the Australian Rover Challenge, placing fourth in the 2023 and 2024 competitions, and we look forward to competing in 2025!",
+        "route": null
+    },
+    { 
+        "path": "/teamphoto.JPG", 
+        "title": "Meet the Team", 
+        "text": "Our team is constantly growing and changing. Making improvements to Perseus requires a range of technical skills and good ideas from our team. If you're interested in getting involved, sign up now!" ,
+        "route": "/team"
+    }
+]

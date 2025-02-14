@@ -1,0 +1,187 @@
+[
+    {
+        "group": "Project Management & Liason",
+        "description": "The ROAR Team Leadership is tasked with the accountibility to deliver a competitive performance. This includes adminstration, logistics and setting goals & objectives, managing schedules and anything else that crops up.",
+        "skills": [
+            "Project Management",
+            "Report Drafting",
+            "Communication",
+            "Public Speaking"
+        ],
+        "members": [
+            {
+                "name": "Aidan Lipinski",
+                "role": "ROAR Team Leader",
+                "image": "/aidan_lipinski.jpg"
+            },
+            {
+                "name": "Nigel Hungerford-Symes",
+                "role": "ROAR Project Manager",
+                "image": "/nigel_hungerford-symes.jpg"
+            }
+            
+        ]
+    },
+    {
+        "group": "Mechanical & Fabrication",
+        "description": "The Mechanical Design & Fabrication team is responsible for designing the physical structure of the rover and working with other teams to bring ideas to physical reality.",
+        "skills": [
+            "OnShape",            
+            "Handtools",
+            "Welding",
+            "Machine Shop Tools",
+            "Liasing with Machinists"
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Mechanical Subsystem Lead",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Mechanical Engineer",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    },
+    {
+        "group": "Software",
+        "description": "The software development team is responsible for writing the code that controls the rover, including the autonomy, teleoperations, and any other software components.",
+        "skills": [
+            "ROS2 Humble",
+            "Python",
+            "C++",
+            "Ubuntu 22.04",
+            "Git",
+            "Testing"                                  
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Software Subsystem Lead",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Software Engineer - Autonomy",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Software Engineer - Vision",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Software Engineer - Testing",
+                "image": "/unknown_person.gif"
+            }
+            
+        ]
+    },
+     {
+        "group": "Firmware",
+        "description": "Perseus uses ESP32 and CANBUS extensively for control and local communication. Firmware is required for supporting all sub-systems.",
+        "skills": [
+            "ESP32",
+            "C++",
+            "PlatformIO",            
+            "Git",
+            "Testing"                                  
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Firmware Subsystem Lead",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    },
+    {
+        "group": "Electrical",
+        "description": "The Electrical Team does all the circuit designing and manufacturing, including the wiring, the sensors, and any other electrical components of the rover.",
+        "skills": [
+            "Circuit Design",
+            "PCB Design - Altium",
+            "Soldering and PCB population",
+            "ESP32",
+            "Part selection and sourcing"
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Electrical Subsystem Lead",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Electrical Engineer",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    },
+    {
+        "group": "Marketing and Sponsor Relations",
+        "description": "The Sponsor Relations team is responsible for building relationships with sponsors and securing funding for the team. This includes writing grant proposals, organizing fundraising events, and maintaining relationships with sponsors.",
+        "skills": [
+            "Grant Writing",
+            "Fundraising",
+            "Public Relations",
+            "Event Planning"
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Marketing Lead",
+                "image": "/unknown_person.gif"
+            },
+            {
+                "name": "Huon Swales",
+                "role": "Website Development",
+                "image": "/huon_swales.jpg"
+            },
+            {
+                "name": "<Currently Open>",
+                "role": "Sponsor Relationship Manager",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    },
+    {
+        "group": "Space Resources",
+        "description": "Designing, building and testing specific apparatus to attach to the rover to meet the goals of the Competition rules with respect to collecting water, sampling lunar simulant and detecting minerals.",
+        "skills": [
+            "Geology",
+            "Chemistry",
+            "Apparatus Design",
+            "Communication",
+            "Testing"           
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Offworld Geology Payload Lead",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    },
+     {
+        "group": "Robotic Arm Subsystem",
+        "description": "Perseus requires at least one robotic arm for competition tasks.",
+        "skills": [
+            "ROS2",
+            "MoveIT or similar",
+            "DynamixelSDK",
+            "CAD",
+            "Testing"           
+        ],
+        "members": [
+            {
+                "name": "<Currently Open>",
+                "role": "Manipulation Payload Lead",
+                "image": "/unknown_person.gif"
+            }
+        ]
+    }
+]

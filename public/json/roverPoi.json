@@ -1,0 +1,7 @@
+[
+    { "roverName": "perseus", "left": 15, "top": 30, "title": "Excavation Combination Bucket", "descrption": "4 in 1 combination bucket with jaw actuation and electro-magnetic pick up capabilities" },
+    { "roverName": "perseus", "left": 32, "top": 72, "title": "Drivetrain", "descrption": "200W Brushless motors with a 40 to 1 planetary reduction" },
+    { "roverName": "perseus", "left": 60, "top": 80, "title": "Wheels", "descrption": "Large 3D printed PETG wheels with tough annd flexible TPU tires" },
+    { "roverName": "perseus", "left": 85, "top": 35, "title": "Suspension", "descrption": "4-wheel rocker suspension which allows for extreme wheel travel" },
+    { "roverName": "perseus", "left": 65, "top": 25, "title": "Compute", "descrption": "Jetson Orin Nano running ROS2 for sensor integation and rover control" }
+]

@@ -10,6 +10,7 @@ app.use(
         contentSecurityPolicy: {
             directives: {
                 frameSrc: ["youtube.com", "www.youtube.com"],
+                defaultSrc: ["'self'", "api.emailjs.com/"],
             },
         },
     })

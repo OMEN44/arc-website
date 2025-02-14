@@ -1,0 +1,44 @@
+[
+    {
+        "roverName": "perseus",
+        "title": "Size",
+        "content": "0.85m x 1.1m x 1.2m",
+        "icon": 0
+    },
+    {
+        "roverName": "perseus",
+        "title": "Weight",
+        "content": "35kg",
+        "icon": 1
+    },
+    {
+        "roverName": "perseus",
+        "title": "Top speed",
+        "content": "~6km/h",
+        "icon": 2
+    },
+    {
+        "roverName": "perseus",
+        "title": "Years Competing",
+        "content": "2 years",
+        "icon": 3
+    },
+    {
+        "roverName": "perseus",
+        "title": "Materials",
+        "content": "Aluminium, 3D prints and acrylic",
+        "icon": 4
+    },
+    {
+        "roverName": "perseus",
+        "title": "Interchangeable Modules",
+        "content": "Excavation, Post-Landing, Science, Light Tower",
+        "icon": 5
+    },
+    {
+        "roverName": "artemis",
+        "title": "Size",
+        "content": "1m x 0.5m x 0.5m",
+        "icon": 0
+    }
+]
