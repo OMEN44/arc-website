@@ -7,7 +7,7 @@ import LogoComponent from "./LogoComponent.vue";
 
 const timer = ref<string>("00:00:00");
 let interval: NodeJS.Timeout | undefined = undefined;
-const finalDate = new Date("03/21/2025");
+const finalDate = new Date("03/26/2026");
 const showMenu = ref<boolean>(false);
 
 onMounted(() => {

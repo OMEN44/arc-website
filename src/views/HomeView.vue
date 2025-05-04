@@ -14,10 +14,11 @@ import CustomFooter from "@/components/FooterComponent.vue";
                     In 2022, the QUT Robotics Club set the goal of competing in the Australian Rover
                     Challenge (ARCh) hosted by the University of Adelaide across all four
                     categories: robotic manipulation, in-situ resource utilisation, offworld geology
-                    and autonomous operation.
+                    and autonomous operation. The team that was formed is known today as R.O.A.R.
+                    (Remote Offworld Autonomous Robotics).
                     <br />
                     In 2023 we competed with our first rover Artemis, a 6 wheeled 50kg rocker bogie
-                    design , placing fourth and winning the Best New Team Award!
+                    design, placing fourth and winning the Best New Team Award!
                     <br />
                     For the 2024 competition, we debuted Perseus, a completely redesigned rover,
                     building on our 2023 experience. Perseus is a 4 wheeled, 40kg modular rover, and
@@ -48,15 +49,24 @@ import CustomFooter from "@/components/FooterComponent.vue";
                 <h2>Our Successes<span>.</span></h2>
                 <div class="cards">
                     <div class="card container">
-                        <h3>2023 -</h3>
+                        <h3 style="margin: auto 20px">2023</h3>
                         <p>
                             Competing for the first time in the Australia Rover Challenge, placing
                             fourth overall, and winning the Best New Team Award!
                         </p>
                     </div>
                     <div class="card container">
-                        <h3>2024 -</h3>
+                        <h3 style="margin: auto 20px">2024</h3>
                         <p>Debuting a brand new platform with Perseus, and placing fourth!</p>
+                    </div>
+                    <div class="card container">
+                        <h3 style="margin: auto 20px">2025</h3>
+                        <p>
+                            After an excellenct performance in the excavation and contruction task,
+                            we became the first Australian team to be invited to demonstrate
+                            Australia's capabilities at the NASA Lunabotics competition 2025 in the
+                            USA!
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,37 @@
 [
-    { "roverName": "perseus", "left": 15, "top": 30, "title": "Excavation Combination Bucket", "descrption": "4 in 1 combination bucket with jaw actuation and electro-magnetic pick up capabilities" },
-    { "roverName": "perseus", "left": 32, "top": 72, "title": "Drivetrain", "descrption": "200W Brushless motors with a 40 to 1 planetary reduction" },
-    { "roverName": "perseus", "left": 60, "top": 80, "title": "Wheels", "descrption": "Large 3D printed PETG wheels with tough annd flexible TPU tires" },
-    { "roverName": "perseus", "left": 85, "top": 35, "title": "Suspension", "descrption": "4-wheel rocker suspension which allows for extreme wheel travel" },
-    { "roverName": "perseus", "left": 65, "top": 25, "title": "Compute", "descrption": "Jetson Orin Nano running ROS2 for sensor integation and rover control" }
+    {
+        "roverName": "perseus",
+        "left": 15,
+        "top": 30,
+        "title": "Excavation Combination Bucket",
+        "descrption": "4 in 1 combination bucket with jaw actuation and electro-magnetic pick up capabilities. The jaw is fabricated with welded steel and the rest of the attachment is aluminium."
+    },
+    {
+        "roverName": "perseus",
+        "left": 32,
+        "top": 72,
+        "title": "Drivetrain",
+        "descrption": "200W Brushless motors with a 40 to 1 planetary reduction. This drive system allows Perseus to traverse all kinds of terrain with ease thanks to the power of the motors and our controll systems."
+    },
+    {
+        "roverName": "perseus",
+        "left": 60,
+        "top": 80,
+        "title": "Wheels",
+        "descrption": "Large 3D printed PETG wheels with tough annd flexible TPU tires."
+    },
+    {
+        "roverName": "perseus",
+        "left": 85,
+        "top": 35,
+        "title": "Suspension",
+        "descrption": "4-wheel rocker suspension which allows for extreme wheel travel. After competing with Artemis and it's 6 wheel system we switched to 4 wheels to accelerate manufacturing and development with almost no loss off performance."
+    },
+    {
+        "roverName": "perseus",
+        "left": 65,
+        "top": 25,
+        "title": "Compute",
+        "descrption": "Jetson Orin Nano running ROS2 for sensor integation and rover control. Custom ESP32 boards run embedded code to interface with hardware. A Raspberry pi 5 is used for the camera and image processing."
+    }
 ]

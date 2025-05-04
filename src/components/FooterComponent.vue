@@ -21,16 +21,16 @@ import LogoComponent from "./LogoComponent.vue";
                 <RouterLink to="/rover">Rover</RouterLink>
             </div>
             <div class="footer-socials">
-                <a href="https://www.facebook.com/QUTRoboticsClub">
+                <a href="https://www.instagram.com/qut.roboticsclub/">
                     <FontAwesomeIcon :icon="faInstagram" />
                 </a>
                 <a href="https://www.facebook.com/QUTRoboticsClub">
                     <FontAwesomeIcon :icon="faFacebook" />
                 </a>
-                <a href="https://www.facebook.com/QUTRoboticsClub">
+                <a href="https://www.tiktok.com/@qutroboticsclub">
                     <FontAwesomeIcon :icon="faTiktok" />
                 </a>
-                <a href="https://www.facebook.com/QUTRoboticsClub">
+                <a href="https://www.linkedin.com/in/qut-robotics-club/">
                     <FontAwesomeIcon :icon="faLinkedin" />
                 </a>
             </div>

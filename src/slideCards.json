@@ -1,9 +1,15 @@
 [
     {
         "title": "Current work",
-        "description": "We're currently working on our 2025 Australian Rover Challenge Entry, with a focus on the software and science subsystem. We're growing our team, so come get involved!",
+        "description": "We're currently working on our 2026 Australian Rover Challenge Entry, with a focus on the software and science subsystem. We're growing our team, so come get involved!",
         "route": "/team",
-        "image": "/teamworking.JPG"
+        "image": "/perseus_dev_25.JPG"
+    },
+    {
+        "title": "2025",
+        "description": "The ROAR Team continued to score higher at ARCh, as well as receiving an invitation to demonstrate at NASA's Lunabotics challenge!",
+        "route": "/team",
+        "image": "/Perseus_2025.JPG"
     },
     {
         "title": "2024",
